@@ -825,15 +825,18 @@
             <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-emerald-300"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 30 Dakikalık Demo</span>
         </div>
         <p class="text-sm text-slate-500 mb-8">Demo randevusu için formu doldurun — aynı gün dönüş yapıyoruz.</p>
-        <form id="demo-request-form" class="demo-form glass-card rounded-2xl p-6 mb-10" novalidate>
+        <form id="demo-request-form" class="demo-form glass-card rounded-2xl p-6 mb-10" action="https://formsubmit.co/ajax/muhsinyasartr@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="30 Dakikalik Demo Talebi">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <label for="demo-name">Ad Soyad</label>
-            <input id="demo-name" name="name" type="text" autocomplete="name" required placeholder="Adınız Soyadınız">
+            <input id="demo-name" name="Ad Soyad" type="text" autocomplete="name" required placeholder="Adınız Soyadınız">
             <label for="demo-factory">Fabrika Adı</label>
-            <input id="demo-factory" name="factory" type="text" autocomplete="organization" required placeholder="Fabrika / şirket adı">
+            <input id="demo-factory" name="Fabrika Adi" type="text" autocomplete="organization" required placeholder="Fabrika / şirket adı">
             <label for="demo-phone">Telefon</label>
-            <input id="demo-phone" name="phone" type="tel" autocomplete="tel" required placeholder="05xx xxx xx xx">
-            <button type="submit">Demo Randevusu İste</button>
-            <p class="form-note">Form, e-posta uygulamanızı açar. İsterseniz doğrudan WhatsApp / telefon ile de ulaşabilirsiniz.</p>
+            <input id="demo-phone" name="Telefon" type="tel" autocomplete="tel" required placeholder="05xx xxx xx xx">
+            <button type="submit" id="demo-submit-btn">Demo Randevusu İste</button>
+            <p class="form-note" id="demo-form-note">Gönderince talep doğrudan muhsinyasartr@gmail.com adresine düşer.</p>
         </form>
         <h2 class="text-4xl md:text-6xl font-bold mb-6">Fabrikanızı Birlikte <span class="gradient-text">Modernize Edelim.</span></h2>
         <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
@@ -938,23 +941,63 @@
 (function () {
   var form = document.getElementById('demo-request-form');
   if (!form) return;
+  var btn = document.getElementById('demo-submit-btn');
+  var note = document.getElementById('demo-form-note');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var name = (form.querySelector('[name="name"]').value || '').trim();
-    var factory = (form.querySelector('[name="factory"]').value || '').trim();
-    var phone = (form.querySelector('[name="phone"]').value || '').trim();
+    var nameEl = form.querySelector('[name="Ad Soyad"]');
+    var factoryEl = form.querySelector('[name="Fabrika Adi"]');
+    var phoneEl = form.querySelector('[name="Telefon"]');
+    var name = (nameEl && nameEl.value || '').trim();
+    var factory = (factoryEl && factoryEl.value || '').trim();
+    var phone = (phoneEl && phoneEl.value || '').trim();
     if (!name || !factory || !phone) {
       alert('Lütfen Ad Soyad, Fabrika Adı ve Telefon alanlarını doldurun.');
       return;
     }
-    var subject = encodeURIComponent('30 Dakikalik Demo Talebi - ' + factory);
-    var body = encodeURIComponent(
-      'Ad Soyad: ' + name + '\n' +
-      'Fabrika Adi: ' + factory + '\n' +
-      'Telefon: ' + phone + '\n\n' +
-      '30 dakikalik demo randevusu istiyorum.'
-    );
-    window.location.href = 'mailto:muhsinyasartr@gmail.com?subject=' + subject + '&body=' + body;
+
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Gönderiliyor…';
+    }
+
+    var payload = {
+      'Ad Soyad': name,
+      'Fabrika Adi': factory,
+      'Telefon': phone,
+      _subject: '30 Dakikalik Demo Talebi - ' + factory,
+      _template: 'table'
+    };
+
+    fetch('https://formsubmit.co/ajax/muhsinyasartr@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+      .then(function (result) {
+        if (!result.ok) throw new Error((result.data && result.data.message) || 'Gönderilemedi');
+        form.reset();
+        if (note) {
+          note.textContent = 'Talebiniz gönderildi. En kısa sürede dönüş yapılacak.';
+          note.style.color = '#6ee7b7';
+        }
+        if (btn) btn.textContent = 'Gönderildi';
+      })
+      .catch(function () {
+        if (note) {
+          note.textContent = 'Gönderim başarısız oldu. Lütfen doğrudan muhsinyasartr@gmail.com adresine yazın veya telefon edin.';
+          note.style.color = '#fdba74';
+        }
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Demo Randevusu İste';
+        }
+      });
   });
 })();
 </script>
