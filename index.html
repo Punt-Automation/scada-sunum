@@ -107,6 +107,40 @@
         .kpi-chip .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; margin-top: 0.2rem; }
         .solve-arrow { color: #34d399; font-weight: 700; }
         .shot-caption { margin-top: 1rem; }
+        .platform-shell {
+            border: 1px solid rgba(52, 211, 153, 0.28);
+            border-radius: 1.25rem;
+            background: linear-gradient(180deg, rgba(30,41,59,0.55) 0%, rgba(15,23,42,0.35) 100%);
+            padding: 1.25rem 1.25rem 1rem;
+            position: relative;
+        }
+        .platform-shell::before {
+            content: "TEK PLATFORM";
+            position: absolute;
+            top: -0.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #34d399;
+            background: #0b0f19;
+            padding: 0 0.75rem;
+        }
+        .layer-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        .chip-sm {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.45rem 0.75rem;
+            border-radius: 0.65rem;
+        }
 </style>
 <!--<base target="_blank">--><base href="." target="_blank">
 <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.bottom-10{bottom:2.5rem}.left-0{left:0px}.left-10{left:2.5rem}.right-10{right:2.5rem}.top-0{top:0px}.top-10{top:2.5rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-4{margin-top:1rem}.mb-1{margin-bottom:0.25rem}.mr-1{margin-right:0.25rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-12{height:3rem}.h-2{height:0.5rem}.h-72{height:18rem}.h-96{height:24rem}.h-full{height:100%}.h-10{height:2.5rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-2{width:0.5rem}.w-72{width:18rem}.w-96{width:24rem}.w-full{width:100%}.w-10{width:2.5rem}.w-fit{width:-moz-fit-content;width:fit-content}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-4xl{max-width:56rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.gap-6{gap:1.5rem}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border-l-2{border-left-width:2px}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-orange-400{--tw-border-opacity:1;border-color:rgb(251 146 60 / var(--tw-border-opacity, 1))}.border-purple-400{--tw-border-opacity:1;border-color:rgb(192 132 252 / var(--tw-border-opacity, 1))}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-orange-500\/10{background-color:rgb(249 115 22 / 0.1)}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.bg-yellow-500\/10{background-color:rgb(234 179 8 / 0.1)}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.p-8{padding:2rem}.p-5{padding:1.25rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.text-left{text-align:left}.text-center{text-align:center}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-20{opacity:0.2}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}}</style></head>
@@ -191,23 +225,77 @@
 </section>
 <div class="page-break"></div>
 
-<!-- 03 AKIŞ -->
+<!-- 03 KAPSAM — 3 katmanlı tek platform -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
-    <div class="max-w-6xl mx-auto w-full text-center">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Kapsam</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızı <span class="gradient-text">Tek Platformdan Yönetin.</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl mx-auto">Hammadde → dozaj → üretim → pres → paketleme. Asıl fark: bu akışın üzerindeki hız, destek ve analiz.</p>
-        <div class="flex flex-wrap justify-center items-center gap-2 text-sm font-semibold">
-            <span class="px-4 py-3 rounded-xl glass-card">Hammadde</span>
-            <span class="flow-arrow">→</span>
-            <span class="px-4 py-3 rounded-xl glass-card">Dozaj</span>
-            <span class="flow-arrow">→</span>
-            <span class="px-4 py-3 rounded-xl glass-card">Üretim</span>
-            <span class="flow-arrow">→</span>
-            <span class="px-4 py-3 rounded-xl glass-card">Pres</span>
-            <span class="flow-arrow">→</span>
-            <span class="px-4 py-3 rounded-xl glass-card">Paketleme</span>
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="text-center mb-8">
+            <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Kapsam</div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızı <span class="gradient-text">Tek Platformdan Yönetin.</span></h2>
+            <p class="text-slate-400 max-w-3xl mx-auto">Siparişten üretime, hammaddeden paketlemeye — operasyonu tek platformda yönetin. Sadece makine ekranı değil; planlama, stok, izlenebilirlik ve analiz birlikte.</p>
         </div>
+
+        <div class="platform-shell glow mb-6">
+            <!-- KATMAN 1 -->
+            <div class="mb-5">
+                <div class="layer-label text-center">Katman 1 · Yönetim / Planlama</div>
+                <div class="flex flex-wrap justify-center items-center gap-2 text-sm font-semibold">
+                    <span class="px-4 py-2 rounded-xl glass-card border border-blue-400/25 text-blue-300">ERP entegrasyonu</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-4 py-2 rounded-xl glass-card">Sipariş / irsaliye</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-4 py-2 rounded-xl glass-card text-emerald-300 border border-emerald-500/30">Üretim planlama</span>
+                </div>
+                <p class="text-center text-xs text-slate-500 mt-2">ERP’nin kendisini satmıyoruz — üretim ile ERP arasında veri akışı kurulabilir.</p>
+            </div>
+
+            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
+
+            <!-- KATMAN 2 — ana ağırlık -->
+            <div class="mb-5">
+                <div class="layer-label text-center">Katman 2 · Fabrika / Üretim</div>
+                <div class="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base font-bold mb-3">
+                    <span class="px-3 py-3 rounded-xl glass-card">Hammadde / stok</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-3 py-3 rounded-xl glass-card">Dozaj</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-3 py-3 rounded-xl lot-premium text-white">Üretim</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-3 py-3 rounded-xl glass-card">Pres</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-3 py-3 rounded-xl glass-card">Paketleme</span>
+                    <span class="flow-arrow">→</span>
+                    <span class="px-3 py-3 rounded-xl glass-card border border-emerald-500/30 text-emerald-300">Sevkiyat*</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 text-xs text-slate-400 mb-2">
+                    <span class="chip-sm glass-card">Hammadde stokları</span>
+                    <span class="chip-sm glass-card">Silo / mamül stok</span>
+                    <span class="chip-sm glass-card">+ Yeni ekipman / dozaj / hat</span>
+                </div>
+                <p class="text-center text-xs text-slate-500">* Sevkiyat: paketleme sonuçlarının ERP / irsaliye tarafına bağlanması — ayrı WMS modülü iddiası değil.</p>
+            </div>
+
+            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
+
+            <!-- KATMAN 3 -->
+            <div class="mb-4">
+                <div class="layer-label text-center">Katman 3 · Veri / Analiz</div>
+                <div class="flex flex-wrap justify-center gap-2 text-xs md:text-sm font-semibold mb-3">
+                    <span class="chip-sm lot-premium text-emerald-200">Lot &amp; izlenebilirlik</span>
+                    <span class="chip-sm glass-card">Kalite / üretim geçmişi</span>
+                    <span class="chip-sm glass-card">Raporlama</span>
+                    <span class="chip-sm glass-card">KPI / performans</span>
+                    <span class="chip-sm glass-card border border-orange-400/40 text-orange-300">Darboğaz analizi</span>
+                </div>
+                <p class="text-center text-xs text-slate-400 mb-1">Hammadde lotu → üretim lotu → paketleme · Üretimi sadece izlemeyin; nerede zaman kaybettiğinizi görün.</p>
+                <p class="text-center text-xs text-slate-500">Kalite = reçete, gerçek dozaj, sapma, lot — laboratuvar / LIMS iddiası yok.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-3 text-sm">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full support-banner font-semibold text-emerald-200"><i class="fa-solid fa-headset"></i> 7/24 Teknik Destek</span>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card font-semibold text-orange-300 border border-orange-400/30"><i class="fa-solid fa-screwdriver-wrench"></i> Sürekli Geliştirme</span>
+        </div>
+        <p class="text-center text-xs text-slate-500 mt-3">Platformun arkasındaki hizmet — üretim akışının içinde değil.</p>
     </div>
 </section>
 <div class="page-break"></div>
@@ -351,7 +439,7 @@
                 <img src="Photos/production_plan.png" class="screenshot w-full" alt="Plan">
                 <div class="shot-caption">
                     <div class="flex items-center gap-2 mb-2"><span class="tag">PLAN</span><h3 class="text-lg font-bold">Üretim Planlama</h3></div>
-                    <p class="text-sm text-slate-400">Kazanç: Vardiya başlamadan ürün, formül ve batch hedefi netleşir.</p>
+                    <p class="text-sm text-slate-400">Kazanç: Vardiya başlamadan ürün, formül, batch hedefi ve silo / stok rotası netleşir.</p>
                 </div>
             </div>
             <div>
@@ -560,12 +648,12 @@
     <div class="max-w-4xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Entegrasyon</div>
         <h2 class="text-3xl md:text-4xl font-bold mb-4">ERP ile Üretimi <span class="gradient-text">Birleştirin</span></h2>
-        <p class="text-slate-400 mb-8">Ana farklılaştırıcı değil. İhtiyaçta üretim–muhasebe veri akışı; ERP entegrasyonuna hazır altyapı.</p>
+        <p class="text-slate-400 mb-8">Ana farklılaştırıcı değil. Kapsam’daki üst katman: sipariş / planlama → üretim → paketleme sonuçları ERP’ye dönebilir. ERP entegrasyonuna hazır altyapı.</p>
         <div class="glass-card rounded-2xl p-6 space-y-3 text-sm">
-            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-blue-400"><strong class="text-white">ERP →</strong> <span class="text-slate-400">sipariş / irsaliye</span></div>
-            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-emerald-400"><strong class="text-white">SCADA →</strong> <span class="text-slate-400">lot, tartım, üretim</span></div>
-            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-orange-400"><strong class="text-white">SCADA → ERP</strong> <span class="text-slate-400">sarfiyat, mamül, paketleme</span></div>
-            <p class="text-xs text-slate-500 pt-2">Hazır plug-and-play connector iddiası yoktur.</p>
+            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-blue-400"><strong class="text-white">ERP →</strong> <span class="text-slate-400">sipariş / irsaliye → üretim planlama</span></div>
+            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-emerald-400"><strong class="text-white">SCADA →</strong> <span class="text-slate-400">stok, lot, tartım, üretim kaydı</span></div>
+            <div class="bg-slate-800/50 rounded-lg p-3 border-l-2 border-orange-400"><strong class="text-white">SCADA → ERP</strong> <span class="text-slate-400">sarfiyat, mamül lot, paketleme (sevkiyat tarafına veri)</span></div>
+            <p class="text-xs text-slate-500 pt-2">Hazır plug-and-play connector iddiası yoktur. ERP’nin kendisini satmıyoruz.</p>
         </div>
     </div>
 </section>
@@ -598,7 +686,7 @@
                 <span><i class="fa-solid fa-globe mr-1"></i> [www.firmawebsitesi.com]</span>
             </div>
         </div>
-        <p class="text-xs text-slate-600 mt-10 max-w-xl mx-auto">Standart / ikincil: alarm, yetki, motor-kapak, silo hareketleri, formül tanımları — ana vaadin önüne geçmez.</p>
+        <p class="text-xs text-slate-600 mt-10 max-w-xl mx-auto">Standart / ikincil: alarm, yetki, motor-kapak, silo hareketleri, formül tanımları — ana vaadin önüne geçmez. Satılan: hız · destek · sürekli gelişim · kullanılabilirlik · analiz · tek platform.</p>
     </div>
 </section>
 
