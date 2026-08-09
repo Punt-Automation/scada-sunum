@@ -3,7 +3,7 @@
 <html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Yem Fabrikasi Otomasyonu SCADA/MES Platformu</title>
+    <title>Yem Fabrikası · SCADA + Üretim Yönetimi + Lot İzlenebilirliği</title>
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -90,311 +90,221 @@
             .page-break { page-break-after: always; }
             .lightbox { display: none !important; }
         }
-    </style>
+    
+        .flow-arrow { color: #34d399; opacity: 0.85; }
+        .lot-premium {
+            background: linear-gradient(160deg, rgba(16,185,129,0.14) 0%, rgba(30,41,59,0.85) 42%, rgba(59,130,246,0.1) 100%);
+            border: 1px solid rgba(52,211,153,0.35);
+            box-shadow: 0 0 80px rgba(52,211,153,0.08);
+        }
+        .kpi-chip {
+            background: rgba(15,23,42,0.65);
+            border: 1px solid rgba(148,163,184,0.2);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+        }
+        .kpi-chip .val { font-size: 1.35rem; font-weight: 800; color: #fff; }
+        .kpi-chip .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; margin-top: 0.2rem; }
+        .solve-arrow { color: #34d399; font-weight: 700; }
+        .shot-caption { margin-top: 1rem; }
+</style>
 <!--<base target="_blank">--><base href="." target="_blank">
 <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.bottom-10{bottom:2.5rem}.left-0{left:0px}.left-10{left:2.5rem}.right-10{right:2.5rem}.top-0{top:0px}.top-10{top:2.5rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-4{margin-top:1rem}.mb-1{margin-bottom:0.25rem}.mr-1{margin-right:0.25rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-12{height:3rem}.h-2{height:0.5rem}.h-72{height:18rem}.h-96{height:24rem}.h-full{height:100%}.h-10{height:2.5rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-2{width:0.5rem}.w-72{width:18rem}.w-96{width:24rem}.w-full{width:100%}.w-10{width:2.5rem}.w-fit{width:-moz-fit-content;width:fit-content}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-4xl{max-width:56rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-8{gap:2rem}.gap-6{gap:1.5rem}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border-l-2{border-left-width:2px}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-orange-400{--tw-border-opacity:1;border-color:rgb(251 146 60 / var(--tw-border-opacity, 1))}.border-purple-400{--tw-border-opacity:1;border-color:rgb(192 132 252 / var(--tw-border-opacity, 1))}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-orange-500\/10{background-color:rgb(249 115 22 / 0.1)}.bg-red-500\/10{background-color:rgb(239 68 68 / 0.1)}.bg-yellow-500\/10{background-color:rgb(234 179 8 / 0.1)}.bg-emerald-500\/10{background-color:rgb(16 185 129 / 0.1)}.bg-purple-500\/10{background-color:rgb(168 85 247 / 0.1)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800\/50{background-color:rgb(30 41 59 / 0.5)}.p-8{padding:2rem}.p-5{padding:1.25rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.text-left{text-align:left}.text-center{text-align:center}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-20{opacity:0.2}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}}</style></head>
 <body class="antialiased">
 
-<section class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-6 py-20">
+<!-- 01 HERO -->
+<section class="min-h-screen flex flex-col justify-center relative overflow-hidden px-6 py-16">
     <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <div class="absolute top-10 left-10 w-72 h-72 bg-emerald-500 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
     </div>
-    <div class="relative z-10 text-center max-w-5xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-sm font-medium text-emerald-300 tracking-wide uppercase">Yem Fabrikasi Otomasyonu</span>
+    <div class="relative z-10 max-w-6xl mx-auto w-full">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-sm font-medium text-emerald-300 tracking-wide uppercase">SCADA + Üretim Yönetimi + Lot İzlenebilirliği</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
+                Yem Fabrikanızın<br>
+                <span class="gradient-text">Tüm Üretimini Tek Sistemden Yönetin</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-3 font-light">
+                Hammaddeden paketlemeye kadar canlı kontrol, stok, dozaj, raporlama ve lot takibi — tek platformda.
+            </p>
+            <p class="text-sm text-slate-500 mb-8">Eski otomasyonu geleceğe taşıyın · Mevcut PLC’nizle çalışır · Kurulum sonrası 7/24 destek</p>
+            <div class="flex flex-wrap justify-center gap-3 text-sm font-medium text-slate-300 mb-10">
+                <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-bolt mr-2 text-emerald-400"></i>Gerçek Zamanlı Üretim</span>
+                <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-fingerprint mr-2 text-blue-400"></i>Tam Lot Takibi</span>
+                <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-microchip mr-2 text-orange-400"></i>Mevcut PLC ile Entegrasyon</span>
+            </div>
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-            Eski Otomasyonu <br>
-            <span class="gradient-text">Gelecege Tasiyin</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 font-light">
-            Web tabanli, modern SCADA / MES platformu. Gercek zamanli kontrol,
-            tam lot izlenebilirligi ve ERP entegrasyonu — eski HMI sistemlerinin yerine.
-            Kurulum sonrasi <strong class="text-emerald-300 font-semibold">7 gun 24 saat</strong> teknik destek.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-300">
-            <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-industry mr-2 text-emerald-400"></i>Dozaj &amp; Tartim</span>
-            <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-chart-line mr-2 text-blue-400"></i>Anlik Raporlama</span>
-            <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-shield-halved mr-2 text-purple-400"></i>Lot Takibi</span>
-            <span class="px-4 py-2 rounded-lg glass-card"><i class="fa-solid fa-plug mr-2 text-orange-400"></i>ERP Entegrasyonu</span>
-            <span class="px-4 py-2 rounded-lg glass-card border border-emerald-500/40"><i class="fa-solid fa-headset mr-2 text-emerald-400"></i>7/24 Destek</span>
-        </div>
+        <img src="Photos/Production_Page.png" class="screenshot w-full max-w-5xl mx-auto glow" alt="Üretim SCADA">
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 02 PROBLEM -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Mevcut Durum</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Eski Sistemler <span class="text-slate-500">Neden Yetersiz?</span></h2>
-        <div class="accent-line mb-16"></div>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card rounded-2xl p-8 glow">
-                <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-triangle-exclamation text-red-400 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Lot Izlenebilirligi Yok</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Eski SCADA sistemleri silo seviyesini gosterir ama <em>hangi lotun hangi batch'e girdigini</em> takip etmez. Geri cagirma (recall) durumunda saatlerce evrak ararsiniz.
-                </p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Problem</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızda Bu Sorunlardan <span class="gradient-text">Biri Var mı?</span></h2>
+        <div class="accent-line mb-12"></div>
+        <div class="grid md:grid-cols-2 gap-5">
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-file-excel text-orange-400 mr-2"></i>Excel’e bağımlı raporlama</h3>
+                <p class="text-sm text-slate-400 mb-2">Veriler vardiya sonunda elle taşınır; hata ve gecikme kaçınılmazdır.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Üretim verileri otomatik kaydedilir.</span></p>
             </div>
-            <div class="glass-card rounded-2xl p-8 glow">
-                <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-file-excel text-orange-400 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Excel'e Bagimli Raporlama</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Uretim verileri vardiya sonunda elle tablolara aktarilir. Hata, gecikme ve yonetim icin hicbir gercek zamanli gorunurluk yoktur.
-                </p>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-puzzle-piece text-yellow-400 mr-2"></i>Dağınık üretim verileri</h3>
+                <p class="text-sm text-slate-400 mb-2">Dozaj, stok, paketleme ayrı dünyalarda; yönetim tek resmi göremez.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Tüm süreç tek sistemde birleşir.</span></p>
             </div>
-            <div class="glass-card rounded-2xl p-8 glow">
-                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-user-xmark text-yellow-400 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Operator Bagimliligi</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Karmasik, eski HMI ekranlari deneyimli operatorler ister. Yeni personel egitimi haftalar surer. Bir emeklilik, vardiyayi felc edebilir.
-                </p>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-magnifying-glass text-red-400 mr-2"></i>Hammadde lotu geriye bulunamıyor</h3>
+                <p class="text-sm text-slate-400 mb-2">Şikayet veya geri çağırmada saatlerce evrak aranır.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Hammaddeden pakete tek lot üzerinden takip.</span></p>
             </div>
-            <div class="glass-card rounded-2xl p-8 glow">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-network-wired text-blue-400 text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-white">Veri Adalari</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Dozaj, stok, kalite ve bakim ayri sistemlerdedir. ERP baglantisi olmadigi icin muhasebe gercek uretim maliyetini asla anlik goremez.
-                </p>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-user-xmark text-purple-400 mr-2"></i>Operatöre bağımlı takip</h3>
+                <p class="text-sm text-slate-400 mb-2">Bilgi kişinin kafasında; vardiya değişince kaybolur.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Her işlem kullanıcı ve zaman damgasıyla kayıtta.</span></p>
+            </div>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-scale-unbalanced text-blue-400 mr-2"></i>Hedef vs gerçek tüketim belirsiz</h3>
+                <p class="text-sm text-slate-400 mb-2">Reçete ile terazinin ne çektiği karşılaştırılamaz.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Her tartımda hedef, gerçekleşen ve sapma görünür.</span></p>
+            </div>
+            <div class="glass-card rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-box text-emerald-400 mr-2"></i>Paket–üretim lot bağı kopuk</h3>
+                <p class="text-sm text-slate-400 mb-2">Torbadaki ürünün hangi mamül lotundan geldiği zor bulunur.</p>
+                <p class="text-sm"><span class="solve-arrow">→</span> <span class="text-emerald-300">Mamül lot → paketleme oturumu → kg / torba izi.</span></p>
             </div>
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 03 FLOW -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Nasıl Okunur?</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ekran Ekran <span class="gradient-text">Ürün Turu</span></h2>
-        <p class="text-slate-400 mb-6 max-w-3xl">Bu belge canlı sunum olmadan da anlaşılacak şekilde hazırlandı. Her kartta gerçek ekran görüntüsü ve kısa açıklama vardır. Resme tıklayınca büyütülür (Esc ile kapanır). Aşağıdaki sıra fabrika akışını takip eder.</p>
-        <div class="grid md:grid-cols-3 gap-4">
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">1</span><h3 class="font-bold text-white mb-1">Hammadde</h3><p class="text-xs text-slate-400">Alım, silo stok, hareket, transfer ve lot izi</p></div>
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">2</span><h3 class="font-bold text-white mb-1">Dozaj</h3><p class="text-xs text-slate-400">Canlı tartım, hedef/gerçekleşen, sarfiyat</p></div>
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">3</span><h3 class="font-bold text-white mb-1">Üretim</h3><p class="text-xs text-slate-400">Plan, SCADA, dashboard, lot ve performans</p></div>
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">4</span><h3 class="font-bold text-white mb-1">Pres</h3><p class="text-xs text-slate-400">Canlı hat SCADA ve iş emri raporu</p></div>
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">5</span><h3 class="font-bold text-white mb-1">Paketleme</h3><p class="text-xs text-slate-400">Lot–paket bağlantısı ve tartım izi</p></div>
-            <div class="glass-card rounded-xl p-5"><span class="tag mb-3 inline-block">6</span><h3 class="font-bold text-white mb-1">Ortak</h3><p class="text-xs text-slate-400">Yetki, alarm, popup mantığı, 7/24 destek</p></div>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Çözüm</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanın <span class="gradient-text">Tek Bakışta Akışı</span></h2>
+        <p class="text-slate-400 mb-12 max-w-3xl">Hammaddeden paketlemeye kadar tüm üretim süreci aynı sistemde yönetilir. Lot izlenebilirliği bu zincirin tamamını birbirine bağlar.</p>
+        <div class="grid md:grid-cols-3 gap-4 mb-8">
+            <div class="glass-card rounded-xl p-5 flow-step">
+                <span class="tag mb-3 inline-block">1</span>
+                <h3 class="font-bold text-white mb-2">Hammadde</h3>
+                <p class="text-sm text-slate-400">Alın, silolayın ve lot bazında takip edin.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <span class="tag mb-3 inline-block">2</span>
+                <h3 class="font-bold text-white mb-2">Dozaj</h3>
+                <p class="text-sm text-slate-400">Reçeteye göre tartın; hedef ve gerçekleşeni karşılaştırın.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <span class="tag mb-3 inline-block">3</span>
+                <h3 class="font-bold text-white mb-2">Üretim</h3>
+                <p class="text-sm text-slate-400">Batch’leri planlayın; üretimi ve tüketimi kaydedin.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <span class="tag mb-3 inline-block">4</span>
+                <h3 class="font-bold text-white mb-2">Pres</h3>
+                <p class="text-sm text-slate-400">Üretimi ve performansı gerçek zamanlı takip edin.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+                <span class="tag mb-3 inline-block">5</span>
+                <h3 class="font-bold text-white mb-2">Paketleme</h3>
+                <p class="text-sm text-slate-400">Üretim lotlarının hangi paketlemelere gittiğini izleyin.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5 lot-premium">
+                <span class="tag mb-3 inline-block">6</span>
+                <h3 class="font-bold text-white mb-2">Lot İzlenebilirliği</h3>
+                <p class="text-sm text-slate-300">Hammaddeden son ürüne tüm geçmişi tek ekranda görün.</p>
+            </div>
         </div>
+        <p class="text-center text-slate-500 text-sm">Ana fikir: <strong class="text-slate-300">Fabrikanın hammaddeden paketlemeye kadar tüm üretim sürecini tek sistemden yönetin.</strong></p>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 04 SCADA -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">1 · Hammadde</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hammadde <span class="gradient-text">Alım, Stok &amp; İzleme</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Kamyondan siloya kadar hammaddenin takibi. Operatör canlı ekrandan yönetir; her hareket lot ve kullanıcıyla kayda geçer. Sorun veya geri çağırma anında “hangi parti, nereden geldi?” sorusuna hızlı cevap bulunur.</p>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <img src="Photos/hammadde_transfer_sayfasi.png" class="screenshot w-full" alt="Hammadde Transfer Sayfasi">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RUNTIME</span>
-                        <h3 class="text-lg font-bold">Hammadde Transfer Sayfası</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Kamyon alım çukurundan hammadde silosuna transferi canlı izlersiniz. Kaynak–hedef, malzeme, aktif rota ve motor akımları tek ekranda; yeşil hat çalışan hattı gösterir, STOP ile anında durdurursunuz.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/malzeme_tanimlari.png" class="screenshot w-full" alt="Hammadde Tanimlari">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">TANIM</span>
-                        <h3 class="text-lg font-bold">Hammadde Tanımları</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Fabrikada kullanılan hammaddeleri (mısır, soya, tuz vb.) sisteme kod ve isimle kaydedersiniz. Siloya malzeme atarken, stok eklerken ve dozajda tüketirken hep bu listeden seçilir; lot numarası da bu koda göre oluşur.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/silo_stok_durumu.png" class="screenshot w-full" alt="Silo Stok Durumu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">STOK</span>
-                        <h3 class="text-lg font-bold">Silo Stok Durumu</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Her siloda ne kadar malzeme var, kapasite ne, doluluk yüzde kaç, kaç ayrı lot duruyor — tablo ve doluluk çubuğuyla tek bakışta görülür. Hammadde / mamül filtresiyle listeyi daraltabilirsiniz.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/silo_stok_hareketleri.png" class="screenshot w-full" alt="Silo Stok Hareketleri">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">HAREKET</span>
-                        <h3 class="text-lg font-bold">Silo Stok Hareketleri</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Stoka ekleme, transfer veya dozaj tüketimi olduğunda sistem kg değişimini yazar: hangi silo, hangi lot, önce/sonra stok, kim yaptı. Tarih veya lot ile süzebilir, Excel / PDF alabilirsiniz.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/hammadde_transfer_raporu.png" class="screenshot w-full" alt="Hammadde Transfer Raporu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RAPOR</span>
-                        <h3 class="text-lg font-bold">Hammadde Transfer Raporu</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Tamamlanan ve devam eden transferlerin listesi: başlangıç–bitiş, süre, kaynak / hedef silo, malzeme, operatör ve lot numarası. “Bugün çukurdan hangi siloya ne aktı?” sorusu bu ekrandan cevaplanır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/raw_material_lot_repor.png" class="screenshot w-full" alt="Kullanilan Hammaddeler - Lot Raporu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">IZLENEBILIRLIK</span>
-                        <h3 class="text-lg font-bold">Lot Raporu — Kullanılan Hammaddeler</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Bitmiş ürün lotunu açınca içine giren her hammadde lotu, çekildiği silo, tedarik / kayıt bilgisi ve tüketilen kg listelenir. Şikayet veya geri çağırmada parti kaynağına buradan inilir.</p>
-                </div>
-            </div>
-        </div>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">SCADA</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızı Canlı <span class="gradient-text">İzleyin ve Yönetin</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Bu sadece motor renkleri gösteren bir HMI değil. Hat, dozaj kartları, stok ve arıza resetleri aynı operasyon ekranında.</p>
+        <img src="Photos/Production_Page.png" class="screenshot w-full mb-4" alt="Üretim SCADA">
+        <p class="text-sm text-slate-500 text-center">Üretim SCADA — motor / kapak durumları, canlı terazi kg’leri, parti ve dozaj özeti</p>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 05 HAMMADDE -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">2 · Dozaj</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Dozaj <span class="gradient-text">Hassas Tartım</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Formüldeki hammaddeler terazilerde otomatik çekilir. Operatör hedef / çekilen kg’yi canlı görür; her satır lot ve silo ile kayda geçer.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Hammadde</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hammaddenin Nereden Geldiğini <span class="gradient-text">Nereye Gittiğini Bilin</span></h2>
+        <p class="text-slate-400 mb-12 max-w-3xl">Alım, silo stok ve hareketler lot ile kayda geçer. Detaylı lot zinciri bir sonraki bölümde.</p>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
-                <img src="Photos/Dosing_Page.png" class="screenshot w-full" alt="Dozaj Sayfasi">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RUNTIME</span>
-                        <h3 class="text-lg font-bold">Dozaj Operasyon Ekranı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Üstte silo stokları, ortada canlı terazi kg’leri, altta Dozaj 1–5 kartları. Her kartta hedef / çekilen / süre ve malzeme listesi vardır. Duraklat, satır atla veya dozajı bitir tek tıkla yapılır.</p>
+                <img src="Photos/hammadde_transfer_sayfasi.png" class="screenshot w-full" alt="Hammadde Transfer">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RUNTIME</span><h3 class="text-lg font-bold">Hammadde Transfer</h3></div>
+                    <p class="text-sm text-slate-400">Çukurdan siloya canlı rota, malzeme ve STOP kontrolü.</p>
                 </div>
             </div>
             <div>
-                <img src="Photos/lot_report_production.png" class="screenshot w-full" alt="Dozaj Uretim Detayi">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">DETAY</span>
-                        <h3 class="text-lg font-bold">Hedef vs Gerçekleşen (Lot Detayı)</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Parti bittikten sonra her hammadde satırı için hedef kg, gerçekleşen kg ve sapma listelenir. Kalite “kaçtı mı?” sorusu bu tablodan cevaplanır.</p>
+                <img src="Photos/silo_stok_durumu.png" class="screenshot w-full" alt="Silo Stok">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">STOK</span><h3 class="text-lg font-bold">Silo Stok Durumu</h3></div>
+                    <p class="text-sm text-slate-400">Doluluk, kapasite ve silodaki lot sayısı tek bakışta.</p>
                 </div>
             </div>
             <div>
-                <img src="Photos/sarflar.png" class="screenshot w-full" alt="Sarflar Raporu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">SARFIYAT</span>
-                        <h3 class="text-lg font-bold">Sarflar (Tüketim Özeti)</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Seçilen tarih aralığında hangi hammaddeden ne kadar tüketildiğini gösterir. Maliyet ve stok planı için yönetim ekranıdır; Excel / PDF alınabilir.</p>
+                <img src="Photos/silo_stok_hareketleri.png" class="screenshot w-full" alt="Stok Hareketleri">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">HAREKET</span><h3 class="text-lg font-bold">Stok Hareketleri</h3></div>
+                    <p class="text-sm text-slate-400">Ekleme, transfer, tüketim — kim, ne zaman, kaç kg.</p>
                 </div>
+            </div>
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-center lot-premium">
+                <span class="tag mb-4 w-fit">LOT</span>
+                <h3 class="text-2xl font-bold text-white mb-3">Lot izi burada başlar</h3>
+                <p class="text-slate-300 leading-relaxed mb-4">Her giriş bir lot numarası alır. Dozajda tüketilince mamül lotuna bağlanır. Paketlemede aynı iz devam eder.</p>
+                <p class="text-sm text-emerald-300">→ Bir sonraki bölüm: 360° lot izlenebilirliği</p>
             </div>
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 06 DOZAJ -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">3 · Üretim</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Üretim <span class="gradient-text">Plan → Proses → Rapor</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Önce plan kurulur, sonra hat canlı izlenir, en sonda dashboard ve lot raporu ile sonuçlar kanıtlanır. Aşağıdaki ekranlar bu sırayı takip eder.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Dozaj</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Teorik Değil, <span class="gradient-text">Gerçek Tüketimi Görün</span></h2>
+        <p class="text-slate-400 mb-8 max-w-3xl">Her tartımı hedef ve gerçekleşen değerleriyle takip edin. Sapma anında görünür.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+            <div class="kpi-chip text-center"><div class="val text-emerald-300">1.000 kg</div><div class="lbl">Hedef</div></div>
+            <div class="kpi-chip text-center"><div class="val">998,7 kg</div><div class="lbl">Gerçekleşen</div></div>
+            <div class="kpi-chip text-center"><div class="val text-orange-400">−1,3 kg</div><div class="lbl">Sapma</div></div>
+            <div class="kpi-chip text-center"><div class="val text-blue-400">Süre</div><div class="lbl">Canlı takip</div></div>
+        </div>
+        <p class="text-xs text-slate-500 mb-8">Örnek gösterim — gerçek değerler sistemdeki tartım kayıtlarından gelir.</p>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
-                <img src="Photos/production_plan.png" class="screenshot w-full" alt="Uretim Planlama">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">PLANLAMA</span>
-                        <h3 class="text-lg font-bold">Üretim Planı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Ürün → formül → hammadde rotası adımları. Batch hedefi (kg), kaç batch ve mamül silosu seçilir; sistem her malzemeyi hangi silodan / dozaj hattından çekeceğini hazırlar. “Plana ekle” ile kuyruk oluşur.</p>
+                <img src="Photos/Dosing_Page.png" class="screenshot w-full" alt="Dozaj">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RUNTIME</span><h3 class="text-lg font-bold">Dozaj Operasyon Ekranı</h3></div>
+                    <p class="text-sm text-slate-400">Terazi kg’leri, dozaj kartları, duraklat / satır atla / bitir.</p>
                 </div>
             </div>
             <div>
-                <img src="Photos/formul_tanimlari.png" class="screenshot w-full" alt="Recete ve Formul">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">REÇETE</span>
-                        <h3 class="text-lg font-bold">Mamül &amp; Formül Tanımları</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Bitmiş ürün kartları ve her ürüne bağlı formül satırları (ör. 1000 kg için bileşen kg’leri). Rasyon programından TXT bırak-bırak ile aktarım; kodlar hammadde / mamül kodlarıyla eşleşir.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/Production_Page.png" class="screenshot w-full" alt="Uretim SCADA">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RUNTIME</span>
-                        <h3 class="text-lg font-bold">Üretim SCADA Ekranı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Hat şeması üzerinde motor / kapak kodları, canlı terazi kg’leri ve parti renkleri. Alttaki dozaj kartı hangi silodan ne çekildiğini gösterir; arıza resetleri aynı ekrandadır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/dashboard1.png" class="screenshot w-full" alt="Gunluk Uretim Dashboard">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">DASHBOARD</span>
-                        <h3 class="text-lg font-bold">Günlük Üretim Panosu</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Toplam tonaj, tamamlanan batch, hedef gerçekleşme %, ortalama sapma ve gün gün üretim grafiği. Yönetici “bu ay ne ürettik?” sorusunu tek ekranda görür; Excel / PDF vardır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/dashboard2.png" class="screenshot w-full" alt="Dashboard Dagilim">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">DASHBOARD</span>
-                        <h3 class="text-lg font-bold">Formül &amp; Hat Dağılımı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Hangi formülün ne kadar pay aldığını ve dozaj hatlarının yük dağılımını gösterir. Darboğaz ve kapasite planı için hızlı okuma.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/production_report.png" class="screenshot w-full" alt="Uretim Raporu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RAPOR</span>
-                        <h3 class="text-lg font-bold">Detaylı Üretim Raporu</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Sipariş / parti bazlı sonuçlar: hedef–gerçekleşen, süre, kullanıcı. Satır açılınca lot düşümleri ve hat detayı görülür. Denetim ve müşteri kanıtı için dışa aktarım vardır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/lot_report_overview.png" class="screenshot w-full" alt="Lot Raporu Ozet">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">LOT</span>
-                        <h3 class="text-lg font-bold">Lot Raporu — Genel Bakış</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Tek mamül lotunda parti zamanı (başlangıç / bitiş / süre) ve dozaj özeti (hedef kg, gerçekleşen kg, görev sayısı). Formül, paketleme, üretim ve kullanılan hammaddeler sekmeleri aynı lotta toplanır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/lot_report_formula.png" class="screenshot w-full" alt="Lot Formul Sekmesi">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">LOT</span>
-                        <h3 class="text-lg font-bold">Lot Raporu — Formül Anı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Üretim anında kullanılan formül satırları kilitlenir. Sonradan reçete değişse bile “o parti hangi reçeteyle yapıldı?” sorusunun cevabı burada kalır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/parti_tasima_sureleri.png" class="screenshot w-full" alt="Parti Gecis Sureleri">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">PERFORMANS</span>
-                        <h3 class="text-lg font-bold">Parti Geçiş Süreleri</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">İstasyonlar arası geçiş sürelerini kaydeder. Nerede beklediğinizi görürsünüz; kapasite artırımı ve darboğaz analizi için kullanılır.</p>
+                <img src="Photos/lot_report_production.png" class="screenshot w-full" alt="Hedef vs Gerçekleşen">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">KALİTE</span><h3 class="text-lg font-bold">Hedef vs Gerçekleşen</h3></div>
+                    <p class="text-sm text-slate-400">Parti sonrası her hammadde satırı için sapma listesi.</p>
                 </div>
             </div>
         </div>
@@ -402,30 +312,116 @@
 </section>
 <div class="page-break"></div>
 
+<!-- 07 ÜRETİM -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">4 · Pres</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Pres <span class="gradient-text">Runtime → Rapor</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Pres hattı canlı SCADA’da izlenir; üretilen mamül iş emri bazında raporlanır — süre, kg, kapasite, akım / sıcaklık ve tüketilen lotlar tek yerde.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Üretim</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Üretimi Planlayın, <span class="gradient-text">Gerçekleşeni Anlık Takip Edin</span></h2>
+        <p class="text-slate-400 mb-12 max-w-3xl">Plan → canlı hat → rapor. Batch, reçete, süre ve miktar tek zincirde.</p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <img src="Photos/production_plan.png" class="screenshot w-full" alt="Üretim Planı">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">PLAN</span><h3 class="text-lg font-bold">Üretim Planlama</h3></div>
+                    <p class="text-sm text-slate-400">Ürün, formül, batch hedefi ve silo rotası.</p>
+                </div>
+            </div>
+            <div>
+                <img src="Photos/Production_Page.png" class="screenshot w-full" alt="Üretim SCADA">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RUNTIME</span><h3 class="text-lg font-bold">Üretim SCADA</h3></div>
+                    <p class="text-sm text-slate-400">Hat şeması, canlı kg’ler, dozaj ve arıza resetleri.</p>
+                </div>
+            </div>
+            <div>
+                <img src="Photos/production_report.png" class="screenshot w-full" alt="Üretim Raporu">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RAPOR</span><h3 class="text-lg font-bold">Üretim Raporu</h3></div>
+                    <p class="text-sm text-slate-400">Hedef–gerçekleşen, süre, kullanıcı; Excel / PDF.</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-center">
+                <h3 class="text-xl font-bold text-white mb-3">Yönetim panosu ayrı bölümde</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Günlük tonaj, batch sayısı ve hedef gerçekleşme % için dashboard ekranları sunumun ilerleyen kısmında.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="page-break"></div>
+
+<!-- 08 LOT STAR -->
+<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">360° Lot İzlenebilirliği</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Bir Ürünün Geçmişini <span class="gradient-text">Saniyeler İçinde Bulun</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Hammadde girişinden paketlemeye kadar üretimin tüm geçmişini tek mamül lot üzerinden takip edin.</p>
+
+        <div class="lot-premium rounded-2xl p-8 mb-10 glow">
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+                <span class="tag">ÖRNEK</span>
+                <h3 class="text-2xl font-bold text-white">MAMÜL LOT: 2026-0809-001</h3>
+            </div>
+            <div class="grid md:grid-cols-4 gap-3 mb-8">
+                <div class="kpi-chip"><div class="lbl">Hammadde lotları</div><div class="val text-sm mt-1">Mısır · Soya · Premix…</div></div>
+                <div class="kpi-chip"><div class="lbl">Üretim</div><div class="val text-sm mt-1">Miktar · zaman · süre</div></div>
+                <div class="kpi-chip"><div class="lbl">Pres</div><div class="val text-sm mt-1">İş emri · kg/h</div></div>
+                <div class="kpi-chip"><div class="lbl">Paketleme</div><div class="val text-sm mt-1">Oturum · torba · kg</div></div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-2">
+                <span class="px-3 py-1 rounded-lg bg-slate-800/80">Mamül Lot</span>
+                <span class="flow-arrow">↓</span>
+                <span class="px-3 py-1 rounded-lg bg-slate-800/80">Hammadde Lotları</span>
+                <span class="flow-arrow">↓</span>
+                <span class="px-3 py-1 rounded-lg bg-slate-800/80">Dozaj</span>
+                <span class="flow-arrow">↓</span>
+                <span class="px-3 py-1 rounded-lg bg-slate-800/80">Üretim</span>
+                <span class="flow-arrow">↓</span>
+                <span class="px-3 py-1 rounded-lg bg-slate-800/80">Pres</span>
+                <span class="flow-arrow">↓</span>
+                <span class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Paketleme</span>
+            </div>
+            <p class="text-center text-emerald-300 font-medium mt-6">“Bu ürün hangi hammaddelerden üretildi?” — Tek ekranda.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <img src="Photos/lot_report_overview.png" class="screenshot w-full" alt="Lot Genel Bakış">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">LOT</span><h3 class="text-lg font-bold">Lot Raporu — Genel Bakış</h3></div>
+                    <p class="text-sm text-slate-400">Parti zamanı, dozaj özeti; formül / üretim / paketleme sekmeleri.</p>
+                </div>
+            </div>
+            <div>
+                <img src="Photos/raw_material_lot_repor.png" class="screenshot w-full" alt="Kullanılan Hammaddeler">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">HAMMADDE İZİ</span><h3 class="text-lg font-bold">Kullanılan Hammadde Lotları</h3></div>
+                    <p class="text-sm text-slate-400">Hangi silodan hangi lot, kaç kg — geri çağırma için kanıt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="page-break"></div>
+
+<!-- 09 PRES -->
+<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Pres</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Presi Sadece İzlemeyin. <span class="gradient-text">Performansını Ölçün.</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Canlı hat + iş emri raporu: süre, üretilen kg, kapasite (kg/saat), ortalama akım ve sıcaklık, tüketilen lotlar.</p>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
                 <img src="Photos/Pellet_Page.png" class="screenshot w-full" alt="Pres SCADA">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RUNTIME</span>
-                        <h3 class="text-lg font-bold">Pres Operasyon Ekranı (PRES1)</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Pres hattı ekipmanları, pelet / soğutucu / siklon akışı canlı izlenir. Motor ve kapak durumları aynı menüden yönetilir.</p>
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RUNTIME</span><h3 class="text-lg font-bold">Pres Operasyon Ekranı</h3></div>
+                    <p class="text-sm text-slate-400">Pelet / soğutucu / siklon akışı ve ekipman durumları.</p>
                 </div>
             </div>
             <div>
-                <img src="Photos/pellet_work_orders.png" class="screenshot w-full" alt="Pres Is Emirleri">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RAPOR</span>
-                        <h3 class="text-lg font-bold">Pres İş Emirleri (Pellet Work Orders)</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Her iş emrinde üretilen kg, kapasite (kg/saat), ort. akım ve sıcaklık görünür. Tüketilen lotlar kart kart listelenir; yarım lotlar ayrı işaretlenir. Excel / PDF alınabilir.</p>
+                <img src="Photos/pellet_work_orders.png" class="screenshot w-full" alt="Pres İş Emirleri">
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RAPOR</span><h3 class="text-lg font-bold">Pres İş Emirleri</h3></div>
+                    <p class="text-sm text-slate-400">kg/h, süre, akım, sıcaklık ve tüketilen lot kartları.</p>
                 </div>
             </div>
         </div>
@@ -433,40 +429,36 @@
 </section>
 <div class="page-break"></div>
 
+<!-- 10 PAKETLEME -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">5 · Paketleme</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Paketleme <span class="gradient-text">Runtime → Rapor</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Mamül silodan torbaya kadar canlı tartım ve oturum kaydı tutulur. Operatör SCADA’da başlatır; biten işler paketleme raporunda lot, torba adedi ve her tartım satırıyla izlenir.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Paketleme</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ürettiğiniz Ürünün <span class="gradient-text">Nereye Gittiğini Bilin</span></h2>
+        <p class="text-slate-400 mb-8 max-w-3xl">Bir üretim lotunun hangi paketlemelere gittiğini takip edin.</p>
+        <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-10">
+            <span class="px-3 py-2 rounded-lg glass-card">Mamül Lot</span>
+            <span class="flow-arrow">↓</span>
+            <span class="px-3 py-2 rounded-lg glass-card">Paketleme Oturumu</span>
+            <span class="flow-arrow">↓</span>
+            <span class="px-3 py-2 rounded-lg glass-card">Paketlenen kg</span>
+            <span class="flow-arrow">↓</span>
+            <span class="px-3 py-2 rounded-lg glass-card">Torba adedi</span>
+            <span class="flow-arrow">↓</span>
+            <span class="px-3 py-2 rounded-lg glass-card border border-emerald-500/30 text-emerald-300">Kayıt</span>
+        </div>
         <div class="grid md:grid-cols-2 gap-8">
             <div>
                 <img src="Photos/packing_page.png" class="screenshot w-full" alt="Paketleme SCADA">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RUNTIME</span>
-                        <h3 class="text-lg font-bold">Paketleme Operasyon Ekranı</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Mamül silo seviyeleri, hava kilidi / hat akışı, Scale 1–2 canlı kg ve PACKING 1 paneli. Kaynak silo seçilir, START ile oturum açılır; tartımlar otomatik yazılır.</p>
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RUNTIME</span><h3 class="text-lg font-bold">Paketleme Operasyon</h3></div>
+                    <p class="text-sm text-slate-400">Silo, terazi kg, START ile oturum; tartımlar otomatik.</p>
                 </div>
             </div>
             <div>
                 <img src="Photos/packing_report.png" class="screenshot w-full" alt="Paketleme Raporu">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">RAPOR</span>
-                        <h3 class="text-lg font-bold">Paketleme Raporu</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Tamamlanan oturumlar: paketleme ünitesi, lot, ürün, kaynak silo, toplam kg, torba adedi, süre. Satır açılınca kullanılan lot ve her tartım (terazi + kg) listelenir. Excel / PDF alınır.</p>
-                </div>
-            </div>
-            <div>
-                <img src="Photos/lot_report_packing.png" class="screenshot w-full" alt="Lot Paketleme">
-                <div class="mt-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="tag">LOT İZİ</span>
-                        <h3 class="text-lg font-bold">Lot Raporu — Paketleme</h3>
-                    </div>
-                    <p class="text-sm text-slate-400 leading-relaxed">Seçilen mamül lotuna bağlı paketleme oturumları: grup, süre, toplam kg ve bu lottan düşen kg. “Bu parti hangi torbalara gitti?” sorusu buradan izlenir.</p>
+                <div class="shot-caption">
+                    <div class="flex items-center gap-2 mb-2"><span class="tag">RAPOR</span><h3 class="text-lg font-bold">Paketleme Raporu</h3></div>
+                    <p class="text-sm text-slate-400">Lot, kg, torba, süre; satırda her tartım detayı.</p>
                 </div>
             </div>
         </div>
@@ -474,170 +466,142 @@
 </section>
 <div class="page-break"></div>
 
+<!-- 11 DASHBOARD -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">6 · Ortak Özellikler</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Güvenlik &amp; <span class="gradient-text">Kolay Kullanım</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Tüm sayfalarda ortak olan yetki, alarm ve müdahale mantığı. Popup / parametre ekran görüntüleri sonraki sette; işlevler zaten canlı sistemde çalışır.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Yönetim</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızın Performansını <span class="gradient-text">Tek Ekranda Görün</span></h2>
+        <p class="text-slate-400 mb-12 max-w-3xl">Günlük tonaj, tamamlanan batch, hedef gerçekleşme ve üretim grafiği — yönetici için hazır pano.</p>
+        <div class="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto">
+            <div>
+                <img src="Photos/dashboard1.png" class="screenshot w-full" alt="Üretim Dashboard">
+                <div class="shot-caption text-center">
+                    <div class="flex items-center justify-center gap-2 mb-2"><span class="tag">DASHBOARD</span><h3 class="text-lg font-bold">Günlük Üretim Panosu</h3></div>
+                    <p class="text-sm text-slate-400">Toplam üretim, batch, hedef %, sapma ve gün gün grafik · Excel / PDF</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="page-break"></div>
+
+<!-- 12 PLC -->
+<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Modernizasyon</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">PLC’nizi Değiştirmek <span class="gradient-text">Zorunda Değilsiniz.</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Yırt-at değil, evrimsel geçiş. Mevcut otomasyon yatırımınızı koruyarak SCADA, raporlama ve lot izlenebilirliğini ekleyin.</p>
+        <div class="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold mb-12">
+            <span class="px-4 py-3 rounded-xl glass-card">Mevcut PLC</span>
+            <span class="flow-arrow text-xl">→</span>
+            <span class="px-4 py-3 rounded-xl glass-card">Yeni SCADA</span>
+            <span class="flow-arrow text-xl">→</span>
+            <span class="px-4 py-3 rounded-xl glass-card">Raporlama</span>
+            <span class="flow-arrow text-xl">→</span>
+            <span class="px-4 py-3 rounded-xl glass-card">Lot İzi</span>
+            <span class="flow-arrow text-xl">→</span>
+            <span class="px-4 py-3 rounded-xl lot-premium text-emerald-300">Yönetim Panosu</span>
+        </div>
         <div class="grid md:grid-cols-2 gap-6">
             <div class="glass-card rounded-xl p-6">
-                <span class="tag mb-3 inline-block">YETKİ</span>
-                <h3 class="font-bold text-white mb-2">Rol Bazlı Erişim</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Operatör, otomasyon ve yönetici rolleri sayfa / işlem bazında ayrılır. Her kullanıcı yalnızca yetkisindeki ekranı görür.</p>
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-microchip text-orange-400 mr-2"></i>Mevcut PLC ile uyum</h3>
+                <p class="text-sm text-slate-400">OPC üzerinden mevcut PLC / HMI katmanına bağlanır. Sahadaki otomasyonu bozmadan modern arayüz, raporlama ve lot kaydı eklenir.</p>
             </div>
             <div class="glass-card rounded-xl p-6">
-                <span class="tag mb-3 inline-block">ALARM</span>
-                <h3 class="font-bold text-white mb-2">Alarm Merkezi</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Aktif alarm sayısı footer’da görünür; liste seviye, kaynak ve zaman ile açılır. PLC bağlantısı da aynı yerden izlenir.</p>
+                <h3 class="font-bold text-white mb-2"><i class="fa-solid fa-globe text-emerald-400 mr-2"></i>Fabrikanıza her ekrandan erişin</h3>
+                <p class="text-sm text-slate-400">Web tabanlı: kontrol odası, ofis veya tablet. Merkezi güncelleme; her PC’ye kurulum yükü yok.</p>
             </div>
-            <div class="glass-card rounded-xl p-6">
-                <span class="tag mb-3 inline-block">POPUP</span>
-                <h3 class="font-bold text-white mb-2">Motor / Kapak Kontrolü</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Ekipmana tıklayınca start–stop, bakım ve akım bilgisi açılır. Manuel müdahaleler kullanıcı adıyla kayda geçer.</p>
+        </div>
+        <p class="text-center text-lg text-emerald-300 font-semibold mt-10">“Mevcut yatırımımı çöpe atmadan sistemi modernize edebilirim.”</p>
+    </div>
+</section>
+<div class="page-break"></div>
+
+<!-- 13 ERP -->
+<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+    <div class="max-w-5xl mx-auto w-full">
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">ERP</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">ERP ile Üretimi <span class="gradient-text">Birleştirin</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">ERP entegrasyonuna hazır altyapı. SAP, Logo, Mikro ve özel API’lerle üretim ile muhasebe arasında veri akışı kurulabilir.</p>
+        <div class="glass-card rounded-2xl p-8 glow">
+            <h3 class="text-xl font-bold mb-6">Tipik veri akışı</h3>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">1</div>
+                    <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-blue-400"><strong class="text-white">ERP →</strong> <span class="text-slate-400 text-sm">sipariş / irsaliye bilgisi</span></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">2</div>
+                    <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-emerald-400"><strong class="text-white">SCADA →</strong> <span class="text-slate-400 text-sm">lot, tartım, üretim kaydı</span></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">3</div>
+                    <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-orange-400"><strong class="text-white">SCADA → ERP</strong> <span class="text-slate-400 text-sm">sarfiyat, mamül lot, paketleme sonuçları</span></div>
+                </div>
             </div>
-            <div class="glass-card rounded-xl p-6">
-                <span class="tag mb-3 inline-block">DESTEK</span>
-                <h3 class="font-bold text-white mb-2">7/24 Uzaktan Destek</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Gece vardiyası ve hafta sonu dahil teknik ekip uzaktan erişimle müdahale eder. Kurulum sonrası destek standarttır.</p>
-            </div>
+            <p class="text-xs text-slate-500 mt-6">Entegrasyon kapsamı projeye göre planlanır; hazır “plug-and-play connector” iddiası yoktur.</p>
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 14 STANDART -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Teknoloji</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-12">ERP'ye Hazir. <span class="gradient-text">Gelecege Acik.</span></h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="space-y-6">
-                <div class="glass-card rounded-xl p-6 flex gap-4 items-start">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-globe text-emerald-400"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Web Tabanli Mimari</h4>
-                        <p class="text-sm text-slate-400">Kurulum gerektirmez. Kontrol odasindan, ofisten veya tabletten erisim. Otomatik guncellemeler, kesinti olmadan.</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-xl p-6 flex gap-4 items-start">
-                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-plug text-blue-400"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">ERP Entegrasyon Katmani</h4>
-                        <p class="text-sm text-slate-400">SAP, Logo, Mikro ve ozel REST API'ler icin hazir konnektorler. Cift yonlu senkronizasyon: siparisler girer, uretim sonuclari cikar.</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-xl p-6 flex gap-4 items-start">
-                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-language text-purple-400"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Cok Dilli Altyapi</h4>
-                        <p class="text-sm text-slate-400">Su anda Turkce ve Ingilizce calisiyor. Bulgarca, Romence veya Rusca dil paketleri haftalar icinde eklenebilir.</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-xl p-6 flex gap-4 items-start">
-                    <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-microchip text-orange-400"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white mb-1">Mevcut PLC ile Uyum</h4>
-                        <p class="text-sm text-slate-400">Siemens, Allen-Bradley, Schneider ve Modicon PLC'lere baglanir. Yirt-at degil, evrimsel gecis. Mevcut otomasyonu koruyarak modernize eder.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="glass-card rounded-2xl p-8 glow flex flex-col justify-center">
-                <h3 class="text-xl font-bold mb-8">Entegrasyon Veri Akisi</h3>
-                <div class="space-y-5">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">1</div>
-                        <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-blue-400">
-                            <strong class="text-white">ERP gonderir:</strong> <span class="text-slate-400 text-sm">Satin alma irsaliyesi ve beklenen kamyon teslimati</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">2</div>
-                        <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-emerald-400">
-                            <strong class="text-white">SCADA alir:</strong> <span class="text-slate-400 text-sm">Kamyonu dogrular, net tartimi hesaplar, lot atar, siloya yonlendirir</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">3</div>
-                        <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-purple-400">
-                            <strong class="text-white">Uretim calisir:</strong> <span class="text-slate-400 text-sm">Formul, dozaj hatasi ve sure loglariyla tam kayit</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-sm font-bold text-emerald-400">4</div>
-                        <div class="flex-1 bg-slate-800/50 rounded-lg p-4 border-l-2 border-orange-400">
-                            <strong class="text-white">SCADA geri gonderir:</strong> <span class="text-slate-400 text-sm">Gercek sarfiyat, mamul lot miktari ve paketleme kayitlari</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Standart Özellikler</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Sistemin <span class="gradient-text">Her Noktasında</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Ana fark lot ve üretim yönetimi; bunlar günlük operasyonu tamamlar.</p>
+        <div class="grid md:grid-cols-2 gap-5">
+            <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">YETKİ</span><h3 class="font-bold text-white mb-1">Rol bazlı erişim</h3><p class="text-sm text-slate-400">Operatör / otomasyon / yönetici — sayfa ve işlem yetkisi.</p></div>
+            <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">ALARM</span><h3 class="font-bold text-white mb-1">Alarm merkezi</h3><p class="text-sm text-slate-400">Aktif alarmlar ve PLC bağlantı durumu footer’da.</p></div>
+            <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">KONTROL</span><h3 class="font-bold text-white mb-1">Motor / kapak popup</h3><p class="text-sm text-slate-400">Start–stop, bakım, akım; müdahale kullanıcıyla kayıtta.</p></div>
+            <div class="glass-card rounded-xl p-5 support-banner"><span class="tag mb-2 inline-block">DESTEK</span><h3 class="font-bold text-white mb-1">7/24 uzaktan destek</h3><p class="text-sm text-slate-300">Gece ve hafta sonu dahil teknik müdahale.</p></div>
         </div>
-        <div class="support-banner rounded-2xl p-8 mt-10 flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-headset text-emerald-400 text-3xl"></i>
-            </div>
-            <div class="flex-1">
-                <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <span class="tag">DESTEK</span>
-                    <h3 class="text-2xl font-bold text-white">7 Gun 24 Saat Teknik Destek</h3>
-                </div>
-                <p class="text-slate-300 leading-relaxed max-w-3xl">
-                    Fabrika durmaz; destek de durmaz. Gece vardiyasi, hafta sonu veya resmi tatil fark etmez —
-                    teknik ekibimiz uzaktan erisimle kritik arizaya aninda mudahale eder. Kurulumdan sonra yaninizdayiz.
-                </p>
-            </div>
-            <div class="shrink-0 text-center md:text-right px-4">
-                <p class="text-4xl font-extrabold gradient-text leading-none">7/24</p>
-                <p class="text-xs text-emerald-300 uppercase tracking-wider mt-2">Kesintisiz destek</p>
-            </div>
+        <div class="mt-8 glass-card rounded-xl p-5 text-sm text-slate-400">
+            <strong class="text-slate-300">Ayrıca mevcut:</strong> hammadde / formül tanımları, transfer raporları, sarflar, parti geçiş süreleri, çok dilli arayüz (TR / EN) — ihtiyaç halinde gösterilir; ana satış akışında öne çıkarılmadı.
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
+<!-- 15 CTA -->
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center items-center text-center">
     <div class="max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-sm font-medium text-emerald-300">2026 3. Ceyrek Kurulumlari Icin Musait · 7/24 Destek</span>
+            <span class="text-sm font-medium text-emerald-300">30 Dakikalık Demo · 7/24 Destek</span>
         </div>
-        <h2 class="text-5xl md:text-6xl font-bold mb-6">Fabrikanizi <br><span class="gradient-text">Modernize Edelim.</span></h2>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">Fabrikanızı Birlikte <span class="gradient-text">Modernize Edelim.</span></h2>
         <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-            30 dakikalik uzaktan demo icin randevu alin. Gercek bir yem fabrikasinda calisan platformu ekibinize canli gosterelim
-            ve mevcut otomasyon altyapiniza nasil entegre edecegimizi konusalim. Canliya alindiktan sonra
-            <strong class="text-emerald-300 font-semibold">7/24 teknik destek</strong> standarttir.
+            Mevcut PLC / HMI sisteminizi inceleyelim.
+            Bugün göremediğiniz verileri birlikte belirleyelim.
+            Yeni sistemin fabrikanızda nasıl çalışacağını canlı gösterelim.
         </p>
         <div class="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto mb-12">
             <div class="glass-card rounded-xl p-6">
                 <i class="fa-solid fa-laptop-code text-emerald-400 text-2xl mb-4"></i>
-                <h4 class="font-bold text-white mb-2">Canli Demo</h4>
-                <p class="text-sm text-slate-400">Dozaj, raporlama ve izlenebilirlik modullerinin ekran paylasimli turu.</p>
+                <h4 class="font-bold text-white mb-2">Canlı Demo</h4>
+                <p class="text-sm text-slate-400">Dozaj, lot izi ve raporların ekran paylaşımlı turu.</p>
             </div>
             <div class="glass-card rounded-xl p-6">
                 <i class="fa-solid fa-clipboard-check text-blue-400 text-2xl mb-4"></i>
-                <h4 class="font-bold text-white mb-2">Ucretsiz Degerlendirme</h4>
-                <p class="text-sm text-slate-400">Mevcut PLC/HMI altyapinizi inceler, entegrasyon yol haritasi sunariz.</p>
+                <h4 class="font-bold text-white mb-2">Ücretsiz Değerlendirme</h4>
+                <p class="text-sm text-slate-400">Mevcut PLC/HMI incelemesi ve entegrasyon yol haritası.</p>
             </div>
             <div class="glass-card rounded-xl p-6">
                 <i class="fa-solid fa-handshake text-purple-400 text-2xl mb-4"></i>
-                <h4 class="font-bold text-white mb-2">Pilot Proje</h4>
-                <p class="text-sm text-slate-400">Tek bir hat uzerinde baslayin. Sistem size kazanc sagladigini kantladiktan sonra tum tesise yayin.</p>
+                <h4 class="font-bold text-white mb-2">Pilot Hat</h4>
+                <p class="text-sm text-slate-400">Tek hatta başlayın; kanıtlanınca tesise yayın.</p>
             </div>
             <div class="support-banner rounded-xl p-6">
                 <i class="fa-solid fa-headset text-emerald-400 text-2xl mb-4"></i>
                 <h4 class="font-bold text-white mb-2">7/24 Destek</h4>
-                <p class="text-sm text-slate-300">Gece ve hafta sonu dahil uzaktan mudahale. Fabrika durmasin diye yaninizdayiz.</p>
+                <p class="text-sm text-slate-300">Canlıya alındıktan sonra standarttır.</p>
             </div>
         </div>
         <div class="glass-card inline-block rounded-2xl p-8 glow">
-            <p class="text-sm text-slate-400 uppercase tracking-wider mb-2">Iletisim</p>
-            <p class="text-2xl font-bold text-white mb-1">[Adiniz]</p>
+            <p class="text-sm text-slate-400 uppercase tracking-wider mb-2">İletişim</p>
+            <p class="text-2xl font-bold text-white mb-1">[Adınız]</p>
             <p class="text-lg text-emerald-400 mb-4">[eposta@firma.com]</p>
             <div class="flex justify-center gap-6 text-slate-500 text-sm">
                 <span><i class="fa-brands fa-whatsapp mr-1"></i> [Telefon]</span>
@@ -647,7 +611,7 @@
     </div>
 </section>
 
-<div id="image-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Buyuk resim">
+<div id="image-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Büyük resim">
     <button type="button" class="lightbox-close" aria-label="Kapat">&times;</button>
     <img src="" alt="">
 </div>
