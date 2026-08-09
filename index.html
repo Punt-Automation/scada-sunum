@@ -108,10 +108,10 @@
         .solve-arrow { color: #34d399; font-weight: 700; }
         .shot-caption { margin-top: 1rem; }
         .platform-shell {
-            border: 1px solid rgba(52, 211, 153, 0.28);
+            border: 1px solid rgba(52, 211, 153, 0.22);
             border-radius: 1.25rem;
-            background: linear-gradient(180deg, rgba(30,41,59,0.55) 0%, rgba(15,23,42,0.35) 100%);
-            padding: 1.25rem 1.25rem 1rem;
+            background: linear-gradient(180deg, rgba(30,41,59,0.45) 0%, rgba(15,23,42,0.28) 100%);
+            padding: 1.75rem 1.5rem 1.35rem;
             position: relative;
         }
         .platform-shell::before {
@@ -133,25 +133,47 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: #64748b;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.65rem;
+        }
+        .plat-node {
+            display: inline-block;
+            padding: 0.45rem 0.85rem;
+            border-radius: 0.65rem;
+            background: rgba(15, 23, 42, 0.55);
+            color: #cbd5e1;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .plat-node-accent { color: #6ee7b7; }
+        .plat-node-main {
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+        .plat-node-focus {
+            background: linear-gradient(160deg, rgba(16,185,129,0.22) 0%, rgba(30,41,59,0.85) 100%);
+            border-color: rgba(52,211,153,0.35);
+            color: #fff;
         }
         .chip-sm {
             font-size: 0.75rem;
             font-weight: 600;
-            padding: 0.45rem 0.75rem;
-            border-radius: 0.65rem;
-        }
-        .platform-layer-main {
-            padding: 1rem 0.5rem;
-            border-radius: 1rem;
-            background: rgba(15, 23, 42, 0.45);
-            border: 1px solid rgba(52, 211, 153, 0.2);
-        }
-        .platform-layer-side .glass-card,
-        .platform-layer-side .chip-sm {
             padding: 0.4rem 0.7rem;
-            font-size: 0.8rem;
-            font-weight: 600;
+            border-radius: 0.55rem;
+            background: rgba(15, 23, 42, 0.55);
+            color: #94a3b8;
+        }
+        .chip-sm-hi { color: #a7f3d0; }
+        .chip-sm-warn { color: #fdba74; }
+        .platform-layer-main {
+            padding: 1.15rem 0.75rem;
+            border-radius: 1rem;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(52, 211, 153, 0.15);
         }
 </style>
 <!--<base target="_blank">--><base href="." target="_blank">
@@ -198,38 +220,32 @@
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-orange-400 text-2xl mb-3"><i class="fa-solid fa-bolt"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">01 · HIZLI GELİŞTİRME</div>
-                <h3 class="font-bold text-white mb-2">Yeni ihtiyaçlara hızlı cevap</h3>
-                <p class="text-sm text-slate-400">Fabrikanız değiştiğinde sisteminiz de değişebilsin.</p>
+                <h3 class="font-bold text-white mb-2">Yeni ihtiyaçlara hızlı cevap.</h3>
             </div>
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-emerald-400 text-2xl mb-3"><i class="fa-solid fa-headset"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">02 · 7/24 ULAŞILABİLİRLİK</div>
-                <h3 class="font-bold text-white mb-2">Sorun olduğunda ulaşın</h3>
-                <p class="text-sm text-slate-400">Sorun olduğunda ulaşabileceğiniz ekip.</p>
+                <h3 class="font-bold text-white mb-2">Sorun olduğunda ulaşabileceğiniz ekip.</h3>
             </div>
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-purple-400 text-2xl mb-3"><i class="fa-solid fa-hand-pointer"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">03 · KULLANICI ODAKLI</div>
-                <h3 class="font-bold text-white mb-2">Operatörün işini kolaylaştırın</h3>
-                <p class="text-sm text-slate-400">Sade arayüzler; kullanıcı hatalarını azaltmaya yardımcı olur.</p>
+                <h3 class="font-bold text-white mb-2">Operatörün işini kolaylaştıran sade arayüzler.</h3>
             </div>
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-yellow-400 text-2xl mb-3"><i class="fa-solid fa-chart-line"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">04 · ÜRETİM ANALİZİ</div>
-                <h3 class="font-bold text-white mb-2">Darboğazları ve kayıpları görün</h3>
-                <p class="text-sm text-slate-400">Üretimdeki zaman kayıplarını verilerle görün.</p>
+                <h3 class="font-bold text-white mb-2">Zaman kayıplarını ve darboğazları görün.</h3>
             </div>
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-arrows-rotate"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">05 · SÜREKLİ GELİŞTİRME</div>
-                <h3 class="font-bold text-white mb-2">Kurulumla işimiz bitmiyor</h3>
-                <p class="text-sm text-slate-400">Yeni ihtiyaç çıktığında sistemi geliştirmeye devam ediyoruz.</p>
+                <h3 class="font-bold text-white mb-2">Kurulumla işimiz bitmiyor.</h3>
             </div>
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-emerald-300 text-2xl mb-3"><i class="fa-solid fa-seedling"></i></div>
                 <div class="text-xs text-emerald-400 font-bold mb-2 tracking-wider">06 · GELECEĞE AÇIKLIK</div>
-                <h3 class="font-bold text-white mb-2">Sisteminiz de büyüsün</h3>
-                <p class="text-sm text-slate-400">Fabrikanız büyüdükçe sisteminiz de büyüsün.</p>
+                <h3 class="font-bold text-white mb-2">Fabrikanız büyüdükçe sisteminiz de büyüsün.</h3>
             </div>
         </div>
     </div>
@@ -246,46 +262,47 @@
         </div>
 
         <div class="platform-shell glow mb-6">
-            <div class="mb-5 platform-layer-side">
-                <div class="layer-label text-center">ERP / Sipariş / Üretim Planlama</div>
+            <div class="mb-5">
+                <div class="layer-label text-center">Üst katman</div>
                 <div class="flex flex-wrap justify-center items-center gap-2">
-                    <span class="glass-card rounded-xl border border-blue-400/25 text-blue-300">ERP</span>
+                    <span class="plat-node plat-node-accent">ERP</span>
                     <span class="flow-arrow">→</span>
-                    <span class="glass-card rounded-xl">Sipariş</span>
+                    <span class="plat-node">Sipariş</span>
                     <span class="flow-arrow">→</span>
-                    <span class="glass-card rounded-xl text-emerald-300 border border-emerald-500/30">Üretim planlama</span>
+                    <span class="plat-node plat-node-accent">Üretim planlama</span>
                 </div>
-                <p class="text-center text-xs text-slate-500 mt-2">ERP ve üretim verilerini birbirine bağlayın.</p>
+                <p class="text-center text-xs text-slate-500 mt-3">Sipariş ve üretim verilerini birbirine bağlayın.</p>
             </div>
 
             <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
 
             <div class="mb-5 platform-layer-main">
-                <div class="layer-label text-center text-emerald-400/80">Fabrika Operasyonu</div>
-                <div class="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base font-bold">
-                    <span class="px-3 py-3 rounded-xl glass-card">Hammadde / stok</span>
+                <div class="layer-label text-center text-emerald-400/80">Ana operasyon</div>
+                <div class="flex flex-wrap justify-center items-center gap-2">
+                    <span class="plat-node-main">Hammadde</span>
                     <span class="flow-arrow">→</span>
-                    <span class="px-3 py-3 rounded-xl glass-card">Dozaj</span>
+                    <span class="plat-node-main">Dozaj</span>
                     <span class="flow-arrow">→</span>
-                    <span class="px-3 py-3 rounded-xl lot-premium text-white">Üretim</span>
+                    <span class="plat-node-main plat-node-focus">Üretim</span>
                     <span class="flow-arrow">→</span>
-                    <span class="px-3 py-3 rounded-xl glass-card">Pres</span>
+                    <span class="plat-node-main">Pres</span>
                     <span class="flow-arrow">→</span>
-                    <span class="px-3 py-3 rounded-xl glass-card">Paketleme / sevkiyat</span>
+                    <span class="plat-node-main">Paketleme</span>
+                    <span class="flow-arrow text-slate-500">→</span>
+                    <span class="plat-node text-slate-400">Sevkiyat</span>
                 </div>
             </div>
 
             <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
 
-            <div class="platform-layer-side">
-                <div class="layer-label text-center">Veri / Analiz</div>
+            <div>
+                <div class="layer-label text-center">Veri / yönetim</div>
                 <div class="flex flex-wrap justify-center gap-2">
-                    <span class="chip-sm lot-premium text-emerald-200">Lot &amp; izlenebilirlik</span>
-                    <span class="chip-sm glass-card">Raporlama</span>
-                    <span class="chip-sm glass-card">KPI / performans</span>
-                    <span class="chip-sm glass-card border border-orange-400/40 text-orange-300">Darboğaz analizi</span>
+                    <span class="chip-sm chip-sm-hi">Lot &amp; izlenebilirlik</span>
+                    <span class="chip-sm">Raporlama</span>
+                    <span class="chip-sm">KPI / performans</span>
+                    <span class="chip-sm chip-sm-warn">Darboğaz analizi</span>
                 </div>
-                <p class="text-center text-xs text-slate-400 mt-3">Üretimi sadece izlemeyin. Nerede zaman kaybettiğinizi görün.</p>
             </div>
         </div>
 
@@ -325,7 +342,7 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Hızlı Geliştirme</div>
         <h2 class="text-4xl md:text-5xl font-bold mb-4">Yeni Bir İhtiyaç, Yeni Bir Projeye <span class="gradient-text">Dönüşmek Zorunda Değil.</span></h2>
-        <p class="text-slate-400 mb-10 max-w-3xl">Birçok yeni ihtiyaç, günler süren yeni bir projeye dönüşmeden hızlıca sisteme dahil edilebilir.</p>
+        <p class="text-slate-400 mb-10 max-w-3xl">Birçok yeni ihtiyaç, yeni ve uzun bir proje sürecine dönüşmeden sisteme dahil edilebilir.</p>
 
         <div class="grid md:grid-cols-5 gap-3 mb-12 text-center text-sm">
             <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-flask text-emerald-400 mb-2"></i><div class="font-semibold text-white">Yeni dozaj ünitesi</div></div>
@@ -378,7 +395,7 @@
         </div>
         <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
             <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha kısa öğrenme süresi</strong></div>
-            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha az kullanıcı hatası</strong></div>
+            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha az kullanıcı hatasına yardımcı olur</strong></div>
             <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha tutarlı operasyon</strong></div>
         </div>
     </div>
@@ -438,7 +455,6 @@
                 </div>
             </div>
         </div>
-        <p class="text-center text-sm text-slate-500 mt-8">Canlı SCADA ve yönetim panosu ayrı bölümlerde.</p>
     </div>
 </section>
 <div class="page-break"></div>
@@ -480,23 +496,12 @@
                 <div class="kpi-chip"><div class="lbl">İşaret</div><div class="val text-sm text-orange-300 mt-1">Potansiyel darboğaz</div></div>
             </div>
             <p class="text-center text-emerald-300 font-medium">Tek bir anormal süre, hattın gerçek darboğazını ortaya çıkarabilir.</p>
-            <p class="text-center text-xs text-slate-500 mt-2">Örnek gösterim — gerçek süreler istasyon / parti kayıtlarından gelir.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <img src="Photos/parti_tasima_sureleri.png" class="screenshot w-full" alt="Parti süreleri">
-                <div class="shot-caption">
-                    <div class="flex items-center gap-2 mb-2"><span class="tag">SÜRE</span><h3 class="text-lg font-bold">Üretimin Nerede Yavaşladığını Görün</h3></div>
-                    <p class="text-sm text-slate-400">Kazanç: Parti geçiş ve istasyon sürelerini rakamla karşılaştırın.</p>
-                </div>
-            </div>
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-center text-sm text-slate-300 space-y-2">
-                <p class="text-slate-400 mb-2">Takip edilebilen süreler (sistem kayıtları üzerinden):</p>
-                <p>• Parti geçiş süreleri</p>
-                <p>• Üretim / istasyon süreleri</p>
-                <p>• Pres ve paketleme süreleri</p>
-                <p>• Ekipman çalışma süreleri</p>
+        <div class="max-w-4xl mx-auto">
+            <img src="Photos/parti_tasima_sureleri.png" class="screenshot w-full" alt="Parti süreleri">
+            <div class="shot-caption text-center">
+                <div class="flex items-center justify-center gap-2 mb-2"><span class="tag">SÜRE</span><h3 class="text-lg font-bold">Üretimin Nerede Yavaşladığını Görün</h3></div>
             </div>
         </div>
     </div>
@@ -508,7 +513,7 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Lot &amp; İzlenebilirlik</div>
         <h2 class="text-4xl md:text-5xl font-bold mb-4">Ürünün Sadece Geçmişini Değil, <span class="gradient-text">Nasıl Üretildiğini de Bilin.</span></h2>
-        <p class="text-slate-400 mb-8 max-w-3xl">Hammadde → üretim → paketleme izlenebilirliği. Üretimde ne olduğunu geriye dönük anlayın.</p>
+        <p class="text-slate-400 mb-8 max-w-3xl">Üretim verileri sayesinde ürün geçmişini hammaddeden paketlemeye kadar geriye dönük inceleyin.</p>
 
         <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-10">
             <span class="px-3 py-1 rounded-lg bg-slate-800/80">Reçete</span>
@@ -596,20 +601,19 @@
             <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-emerald-300"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 30 Dakikalık Demo</span>
         </div>
         <h2 class="text-4xl md:text-6xl font-bold mb-6">Fabrikanızı Birlikte <span class="gradient-text">Modernize Edelim.</span></h2>
-        <p class="text-xl text-slate-400 mb-4 max-w-2xl mx-auto">
-            Mevcut otomasyonunuzu inceleyelim. Hangi verileri görünür hale getirebileceğimizi ve hangi ihtiyaçlara hızlı cevap verebileceğimizi birlikte değerlendirelim.
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+            Mevcut otomasyonunuzu inceleyelim — birlikte neyi görünür hale getirebileceğimizi değerlendirelim.
         </p>
-        <p class="text-lg text-emerald-300 font-semibold mb-10">Sistemi kurup sizi yalnız bırakmıyoruz.</p>
         <div class="text-left max-w-4xl mx-auto mb-10">
             <h3 class="text-xl font-bold text-white mb-2 text-center">Bizim İçin SCADA Bir Ekrandan Fazlası.</h3>
             <p class="text-sm text-slate-500 mb-6 text-center">SCADA ekranlarını birçok firma yapabilir. Asıl fark fabrikanız değiştiğinde sistemin ne kadar hızlı ayak uydurduğudur.</p>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">01 · HIZLI GELİŞTİRME</div><h4 class="font-bold text-white mb-1">Yeni ihtiyaçlara hızlı cevap</h4><p class="text-slate-400">Fabrikanız değiştiğinde sisteminiz de değişebilsin.</p></div>
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">02 · 7/24 ULAŞILABİLİRLİK</div><h4 class="font-bold text-white mb-1">Sorun olduğunda ulaşın</h4><p class="text-slate-400">Sorun olduğunda ulaşabileceğiniz ekip.</p></div>
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">03 · KULLANICI ODAKLI</div><h4 class="font-bold text-white mb-1">Operatörün işini kolaylaştırın</h4><p class="text-slate-400">Sade arayüzler; kullanıcı hatalarını azaltmaya yardımcı olur.</p></div>
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">04 · ÜRETİM ANALİZİ</div><h4 class="font-bold text-white mb-1">Darboğazları görün</h4><p class="text-slate-400">Üretimdeki zaman kayıplarını verilerle görün.</p></div>
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">05 · SÜREKLİ GELİŞTİRME</div><h4 class="font-bold text-white mb-1">Kurulumla işimiz bitmiyor</h4><p class="text-slate-400">Yeni ihtiyaç çıktığında sistemi geliştirmeye devam ediyoruz.</p></div>
-                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">06 · GELECEĞE AÇIKLIK</div><h4 class="font-bold text-white mb-1">Sisteminiz de büyüsün</h4><p class="text-slate-400">Fabrikanız büyüdükçe sisteminiz de büyüsün.</p></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">01 · HIZLI GELİŞTİRME</div><h4 class="font-bold text-white mb-1">Yeni ihtiyaçlara hızlı cevap.</h4></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">02 · 7/24 ULAŞILABİLİRLİK</div><h4 class="font-bold text-white mb-1">Sorun olduğunda ulaşabileceğiniz ekip.</h4></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">03 · KULLANICI ODAKLI</div><h4 class="font-bold text-white mb-1">Operatörün işini kolaylaştıran sade arayüzler.</h4></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">04 · ÜRETİM ANALİZİ</div><h4 class="font-bold text-white mb-1">Zaman kayıplarını ve darboğazları görün.</h4></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">05 · SÜREKLİ GELİŞTİRME</div><h4 class="font-bold text-white mb-1">Kurulumla işimiz bitmiyor.</h4><p class="text-slate-400 mt-1">Fabrikanızın ihtiyaçları değiştikçe sisteminizi de geliştirmeye devam ediyoruz.</p></div>
+                <div class="lot-premium rounded-xl p-5"><div class="text-xs text-emerald-400 font-bold mb-1">06 · GELECEĞE AÇIKLIK</div><h4 class="font-bold text-white mb-1">Fabrikanız büyüdükçe sisteminiz de büyüsün.</h4></div>
             </div>
         </div>
         <div class="glass-card inline-block rounded-2xl p-8 glow">
