@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://puntautomationtech.com/">
     <meta property="og:image" content="https://puntautomationtech.com/Photos/Production_Page.webp">
     <title>Punt Automation | Yem Fabrikaları İçin SCADA ve Üretim Platformu</title>
-    <link rel="stylesheet" href="site-shell.css">
+    <link rel="stylesheet" href="site-shell.css?v=20260818-3">
     <style>
         html, body { background-color: #0b0f19; margin: 0; }
         body.is-loading { overflow: hidden; }
@@ -136,7 +136,7 @@
                     <i class="fa-solid fa-headset text-emerald-400"></i>7/24 Teknik Destek
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-semibold text-orange-300 border border-orange-400/30">
-                    <i class="fa-solid fa-bolt text-orange-400"></i>Hızlı Geliştirme
+                    <i class="fa-solid fa-layer-group text-orange-400"></i>Ölçeklenebilir Platform
                 </span>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
@@ -234,53 +234,48 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="text-center mb-8">
             <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Kapsam</div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Fabrikanızı <span class="gradient-text">Tek Platformdan Yönetin.</span></h2>
-            <p class="text-slate-400 max-w-3xl mx-auto">Siparişten üretim planına, hammaddeden paketlemeye — fabrika operasyonunu tek platformda birleştirin.</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Siparişten Sevkiyata <span class="gradient-text">Tüm Süreci Yönetin.</span></h2>
+            <p class="text-slate-400 max-w-3xl mx-auto">Üretim planını saha operasyonuyla bağlayın; süreç boyunca oluşan lot, rapor ve performans verilerini tek yerde takip edin.</p>
         </div>
 
-        <div class="platform-shell glow mb-6">
-            <div class="mb-5">
-                <div class="layer-label text-center">Üst katman</div>
-                <div class="flex flex-wrap justify-center items-center gap-2">
-                    <span class="plat-node plat-node-accent">ERP</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node">Sipariş</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node plat-node-accent">Üretim planlama</span>
-                </div>
-                <p class="text-center text-xs text-slate-500 mt-3">Sipariş ve üretim verilerini birbirine bağlayın.</p>
+        <div class="journey-shell glow mb-6">
+            <div class="journey-top">
+                <article class="journey-card">
+                    <div class="journey-heading"><span class="journey-number">01</span><div><span>PLANLA</span><h3>Siparişi üretim planına dönüştürün</h3></div></div>
+                    <div class="journey-flow"><span class="journey-node">Sipariş / ERP</span><i aria-hidden="true">→</i><span class="journey-node journey-node-accent">Üretim planı</span></div>
+                    <p>Siparişleri üretim hedeflerine, reçetelere ve üretim sırasına bağlayın.</p>
+                </article>
+
+                <article class="journey-card journey-card-production">
+                    <div class="journey-heading"><span class="journey-number">02</span><div><span>ÜRET</span><h3>Saha operasyonunu tek akışta yönetin</h3></div></div>
+                    <p class="journey-explorer-hint"><i class="fa-regular fa-hand-pointer" aria-hidden="true"></i> Özellikleri keşfetmek için süreç adımlarına tıklayın.</p>
+                    <div class="journey-flow journey-flow-production">
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-hammadde">Hammadde / Stok</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-dozaj">Dozaj</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-uretim">Karıştırma / Üretim</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-pres">Pres / Peletleme</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-paketleme">Paketleme</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-sevkiyat">Sevkiyat</button>
+                    </div>
+                    <div class="journey-details" aria-live="polite">
+                        <section id="detail-hammadde" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Malzeme kullanımını geriye dönük izleyin</h4><p>Hangi hammaddenin hangi üretimde kullanıldığını görün. Stok hareketlerini malzeme lotlarıyla birlikte takip edin.</p><small><strong>Takip edilenler:</strong> Malzeme lotu · Stok hareketi · Kullanılan miktar</small></section>
+                        <section id="detail-dozaj" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Reçeteye uygunluğu daha kolay kontrol edin</h4><p>Planlanan ve kullanılan miktarları karşılaştırarak olası farklılıkları erken fark edin.</p><small><strong>Takip edilenler:</strong> Hedef miktar · Kullanılan miktar · İşlem zamanı</small></section>
+                        <section id="detail-uretim" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Üretim koşullarını kayıt altında tutun</h4><p>Üretimin hangi reçeteyle, hangi ekipmanda ve ne kadar sürede gerçekleştirildiğini tek kayıtta görüntüleyin.</p><small><strong>Takip edilenler:</strong> Reçete · Ekipman · Üretim süresi</small></section>
+                        <section id="detail-pres" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Ekipman çalışmasını daha görünür hale getirin</h4><p>Çalışma durumunu ve üretim süresini takip ederek süreci etkileyen beklemeleri daha kolay inceleyin.</p><small><strong>Takip edilenler:</strong> Ekipman durumu · İşlem süresi · Üretim kaydı</small></section>
+                        <section id="detail-paketleme" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Paketleme verisini üretimle ilişkilendirin</h4><p>Paket adedi, ağırlık ve lot bilgisini ilgili üretim kaydıyla birlikte takip edin.</p><small><strong>Takip edilenler:</strong> Paket adedi · Ağırlık · Ürün lotu</small></section>
+                        <section id="detail-sevkiyat" class="journey-detail" hidden><span>NE SAĞLAR?</span><h4>Siparişten sevkiyata izlenebilirlik sağlayın</h4><p>Sevk edilen ürünün hangi siparişe ve üretim lotuna ait olduğunu geriye dönük görüntüleyin.</p><small><strong>Takip edilenler:</strong> Sipariş · Üretim lotu · Sevkiyat kaydı</small></section>
+                    </div>
+                    <p>Üretimin her adımını aynı sistem üzerinden izleyin ve yönetin.</p>
+                </article>
             </div>
 
-            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
+            <div class="journey-data-bridge"><span aria-hidden="true">↓</span><strong>Tüm süreçten canlı veri</strong></div>
 
-            <div class="mb-5 platform-layer-main">
-                <div class="layer-label text-center text-emerald-400/80">Ana operasyon</div>
-                <div class="flex flex-wrap justify-center items-center gap-2">
-                    <span class="plat-node-main">Hammadde</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Dozaj</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main plat-node-focus">Üretim</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Pres</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Paketleme</span>
-                    <span class="flow-arrow text-slate-500">→</span>
-                    <span class="plat-node text-slate-400">Sevkiyat</span>
-                </div>
-            </div>
-
-            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
-
-            <div>
-                <div class="layer-label text-center">Veri / yönetim</div>
-                <div class="flex flex-wrap justify-center gap-2">
-                    <span class="chip-sm chip-sm-hi">Lot &amp; izlenebilirlik</span>
-                    <span class="chip-sm">Raporlama</span>
-                    <span class="chip-sm">KPI / performans</span>
-                    <span class="chip-sm chip-sm-warn">Akış ve süre analizi</span>
-                </div>
-            </div>
+            <article class="journey-card journey-card-insight">
+                <div class="journey-heading"><span class="journey-number">03</span><div><span>İZLE VE İYİLEŞTİR</span><h3>Üretim verisini karar desteğine dönüştürün</h3></div></div>
+                <div class="journey-insights"><span>Lot İzlenebilirliği</span><span>Raporlama</span><span>KPI / Performans</span><span>Süre ve Üretim Kaybı Analizi</span></div>
+                <p>Üretim devam ederken toplanan verilerle kaliteyi, süreleri ve performansı değerlendirin.</p>
+            </article>
         </div>
 
     </div>
@@ -335,66 +330,56 @@
 </section>
 <div class="page-break"></div>
 
-<!-- 06 HIZLI GELİŞTİRME -->
-<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+<!-- 06 ÖLÇEKLENEBİLİR ALTYAPI -->
+<section id="olceklenebilirlik" class="min-h-screen px-6 py-20 flex flex-col justify-center scalable-section">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Hızlı Geliştirme</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Yeni Bir İhtiyaç, Yeni Bir Projeye <span class="gradient-text">Dönüşmek Zorunda Değil.</span></h2>
-        <p class="text-slate-400 mb-10 max-w-3xl">Birçok yeni ihtiyaç, yeni ve uzun bir proje sürecine dönüşmeden sisteme dahil edilebilir.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Ölçeklenebilir Altyapı</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Yeni Ekipman, <span class="gradient-text">Yeni Bir Sistem Kurmanız Anlamına Gelmesin.</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Fabrikanıza yeni bir hat, ekipman veya üretim adımı eklendiğinde mevcut platform geliştirilebilir. Yeni yapı; kontrol, izleme ve raporlama süreçlerine dahil edilerek aynı sistem üzerinden yönetilebilir.</p>
 
-        <div class="grid md:grid-cols-5 gap-3 mb-12 text-center text-sm">
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-flask text-emerald-400 mb-2"></i><div class="font-semibold text-white">Yeni dozaj ünitesi</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-gears text-blue-400 mb-2"></i><div class="font-semibold text-white">Yeni ekipman</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-file-lines text-orange-400 mb-2"></i><div class="font-semibold text-white">Yeni rapor</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-display text-purple-400 mb-2"></i><div class="font-semibold text-white">Yeni takip ekranı</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-industry text-yellow-400 mb-2"></i><div class="font-semibold text-white">Yeni üretim hattı</div></div>
+        <div class="scalable-panel glow">
+            <span class="scalable-example-label">ÖRNEK SENARYO</span>
+            <h3>Yeni bir dozaj ünitesi eklendiğinde</h3>
+            <div class="scalable-flow" aria-label="Yeni ekipmanın mevcut platforma dahil edilme süreci">
+                <span class="scalable-step">Yeni ekipman</span><i aria-hidden="true">→</i>
+                <span class="scalable-step">Mevcut platforma entegrasyon</span><i aria-hidden="true">→</i>
+                <span class="scalable-step">Kontrol ve izleme ekranları</span><i aria-hidden="true">→</i>
+                <span class="scalable-step scalable-step-result">Tek sistemden yönetim</span>
+            </div>
+            <p class="scalable-result"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Fabrikanız büyürken kullandığınız platform da ihtiyaçlarınıza uyum sağlar.</p>
         </div>
 
-        <div class="lot-premium rounded-2xl p-8 glow">
-            <div class="mb-2 text-xs font-bold tracking-wider text-orange-300">İHTİYACA CEVAP VERME HIZI</div>
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Fabrikanızdaki Değişiklik Sisteminizi Bekletmesin.</h3>
-            <p class="text-slate-300 mb-3 max-w-3xl">Buradaki hız, ekran açılış milisaniyesi değil.</p>
-            <p class="text-slate-300 mb-8 max-w-3xl">Asıl hız, fabrikanızda bir değişiklik olduğunda sisteminizin de değişebilmesidir.</p>
-            <h4 class="text-lg font-bold text-white mb-4">Yeni bir dozaj ünitesi mi eklendi?</h4>
-            <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-6">
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">Yeni dozaj ünitesi</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">Ekipman tanımı</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">SCADA</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">Kontrol</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Raporlama</span>
-            </div>
-            <p class="text-center text-emerald-300 font-medium">Yeni ihtiyaç → hızlı geliştirme → hızlı devreye alma.</p>
+        <div class="scalable-benefits">
+            <article><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><div><h4>Mevcut yapıyı koruyun</h4><p>Sistemi baştan kurmadan yeni ihtiyaçları mevcut yapıya ekleyin.</p></div></article>
+            <article><i class="fa-solid fa-layer-group" aria-hidden="true"></i><div><h4>Tek platformda kalın</h4><p>Yeni ekipman için birbirinden kopuk farklı yazılımlar kullanmayın.</p></div></article>
+            <article><i class="fa-solid fa-link" aria-hidden="true"></i><div><h4>Veri bütünlüğünü sürdürün</h4><p>Yeni üretim adımını mevcut lot, rapor ve performans kayıtlarıyla ilişkilendirin.</p></div></article>
+            <article><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i><div><h4>Kademeli olarak büyüyün</h4><p>İhtiyaç oluştuğunda yeni hat, ekran ve raporlarla ilerleyin.</p></div></article>
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
 <!-- 07 KULLANILABİLİRLİK -->
-<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+<section id="kullanim-kolayligi" class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Anlaşılabilirlik</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Operatör Sistemi <span class="gradient-text">Ezberlemek Zorunda Kalmasın.</span></h2>
-        <p class="text-slate-400 mb-8 max-w-3xl">Doğru bilgi, doğru yerde, doğru zamanda.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Kullanım Kolaylığı</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Operatör İhtiyaç Duyduğu Bilgiyi <span class="gradient-text">Tek Bakışta Görsün.</span></h2>
+        <p class="text-slate-400 mb-8 max-w-3xl">Üretim durumu, ekipman bilgileri ve temel işlemler ilgili ekranda açıkça gösterilsin.</p>
         <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div>
                 <img src="Photos/Dosing_Page.webp" class="screenshot w-full" alt="Operatör için dozaj süreci ve parti durum ekranı" loading="lazy" decoding="async">
-                <p class="text-sm text-slate-500 mt-3">Kazanç: Daha kısa öğrenme süresi, daha az kullanıcı hatası.</p>
             </div>
             <div class="space-y-3 text-sm">
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Net ekipman durumları</strong><p class="text-slate-400 mt-1">Çalışıyor / duruyor / arıza — tek bakışta.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Açık üretim durumu</strong><p class="text-slate-400 mt-1">Parti ve dozaj özeti ekranda.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Kolay erişilen bilgiler</strong><p class="text-slate-400 mt-1">Menü labirenti yerine doğru yüzey.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Anlaşılır işlemler</strong><p class="text-slate-400 mt-1">Start, duraklat, satır atla — net aksiyonlar.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Ekipman durumlarını kolayca görün</strong><p class="text-slate-400 mt-1">Hangi ekipmanın çalıştığını, beklediğini veya arızada olduğunu tek bakışta inceleyin.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Üretimi anlık olarak takip edin</strong><p class="text-slate-400 mt-1">Aktif parti, dozaj ilerlemesi ve kalan işlem bilgilerini aynı ekranda görün.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">İhtiyaç duyulan bilgiye hızlı ulaşın</strong><p class="text-slate-400 mt-1">Sık kullanılan bilgilere karmaşık menüler arasında aramadan erişin.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Temel işlemleri açıkça yönetin</strong><p class="text-slate-400 mt-1">Başlatma, duraklatma ve işlem adımı atlama kontrollerini kolayca ayırt edin.</p></div>
             </div>
         </div>
         <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
             <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha kısa öğrenme süresi</strong></div>
-            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha az kullanıcı hatasına yardımcı olur</strong></div>
-            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Daha tutarlı operasyon</strong></div>
+            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Kullanıcı hatası riskini azaltmaya destek</strong></div>
+            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Operatörler arasında daha tutarlı çalışma</strong></div>
         </div>
     </div>
 </section>
@@ -1190,5 +1175,6 @@
   });
 })();
 </script>
-<script src="site-shell.js"></script>
+<script src="site-shell.js?v=20260818-2"></script>
+<script src="journey-explorer.js?v=20260818-1"></script>
 </body></html>
