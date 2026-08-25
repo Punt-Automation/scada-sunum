@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://puntautomationtech.com/en.html">
     <meta property="og:image" content="https://puntautomationtech.com/Photos/Production_Page.webp">
     <title>Punt Automation | SCADA and Production Platform for Feed Mills</title>
-    <link rel="stylesheet" href="site-shell.css">
+    <link rel="stylesheet" href="site-shell.css?v=20260818-3">
     <style>
         html, body { background-color: #0b0f19; margin: 0; }
         body.is-loading { overflow: hidden; }
@@ -138,12 +138,12 @@
                     <i class="fa-solid fa-headset text-emerald-400"></i>24/7 Technical Support
                 </span>
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-semibold text-orange-300 border border-orange-400/30">
-                    <i class="fa-solid fa-bolt text-orange-400"></i>Rapid Development
+                    <i class="fa-solid fa-layer-group text-orange-400"></i>Scalable Platform
                 </span>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
-                For Your Feed Mill<br>
-                <span class="gradient-text">More Than Just SCADA.</span>
+                More Than SCADA<br>
+                <span class="gradient-text">for Your Feed Mill.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-3 font-light">
                 Manage production, see where it slows down, and evolve the system as your needs change.
@@ -164,7 +164,7 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Why Us?</div>
         <h2 class="text-4xl md:text-5xl font-bold mb-4">A Good SCADA Screen <span class="gradient-text">Is Not Enough.</span></h2>
-        <p class="text-slate-400 mb-12 max-w-3xl">Value is in the system behind the screen — and the team behind the system.</p>
+        <p class="text-slate-400 mb-12 max-w-3xl">The real value lies in the system behind the screen — and the team behind the system.</p>
         <div class="grid md:grid-cols-3 gap-5">
             <div class="lot-premium rounded-2xl p-6">
                 <div class="text-orange-400 text-2xl mb-3"><i class="fa-solid fa-bolt"></i></div>
@@ -236,53 +236,48 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="text-center mb-8">
             <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Scope</div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Run Your Plant <span class="gradient-text">From One Platform.</span></h2>
-            <p class="text-slate-400 max-w-3xl mx-auto">From order to production planning, from raw materials to packing — unify plant operations on one platform.</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Manage the Entire Process <span class="gradient-text">from Order to Dispatch.</span></h2>
+            <p class="text-slate-400 max-w-3xl mx-auto">Connect production planning with shop-floor operations and track lot, reporting, and performance data in one place.</p>
         </div>
 
-        <div class="platform-shell glow mb-6">
-            <div class="mb-5">
-                <div class="layer-label text-center">Top layer</div>
-                <div class="flex flex-wrap justify-center items-center gap-2">
-                    <span class="plat-node plat-node-accent">ERP</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node">Orders</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node plat-node-accent">Production planning</span>
-                </div>
-                <p class="text-center text-xs text-slate-500 mt-3">Connect order and production data.</p>
+        <div class="journey-shell glow mb-6">
+            <div class="journey-top">
+                <article class="journey-card">
+                    <div class="journey-heading"><span class="journey-number">01</span><div><span>PLAN</span><h3>Turn orders into a production plan</h3></div></div>
+                    <div class="journey-flow"><span class="journey-node">Order / ERP</span><i aria-hidden="true">→</i><span class="journey-node journey-node-accent">Production plan</span></div>
+                    <p>Connect orders with production targets, formulas, and sequencing.</p>
+                </article>
+
+                <article class="journey-card journey-card-production">
+                    <div class="journey-heading"><span class="journey-number">02</span><div><span>PRODUCE</span><h3>Manage shop-floor operations as one flow</h3></div></div>
+                    <p class="journey-explorer-hint"><i class="fa-regular fa-hand-pointer" aria-hidden="true"></i> Select a process step to explore its features.</p>
+                    <div class="journey-flow journey-flow-production">
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-materials">Raw Materials / Stock</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-dosing">Dosing</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-production">Mixing / Production</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-pelleting">Press / Pelleting</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-packing">Packing</button><i aria-hidden="true">→</i>
+                        <button class="journey-node journey-step-trigger" type="button" aria-expanded="false" aria-controls="detail-dispatch">Dispatch</button>
+                    </div>
+                    <div class="journey-details" aria-live="polite">
+                        <section id="detail-materials" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Trace material use throughout production</h4><p>See which raw materials were used in each production run and track stock movements together with material lots.</p><small><strong>Tracked data:</strong> Material lot · Stock movement · Quantity used</small></section>
+                        <section id="detail-dosing" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Check formula compliance more easily</h4><p>Compare planned and actual quantities to identify potential differences early.</p><small><strong>Tracked data:</strong> Target quantity · Actual quantity · Process time</small></section>
+                        <section id="detail-production" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Keep production conditions on record</h4><p>View the formula, equipment, and duration associated with each production run in a single record.</p><small><strong>Tracked data:</strong> Formula · Equipment · Production time</small></section>
+                        <section id="detail-pelleting" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Make equipment operation more visible</h4><p>Track operating status and production time to investigate delays affecting the process more easily.</p><small><strong>Tracked data:</strong> Equipment status · Process time · Production record</small></section>
+                        <section id="detail-packing" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Connect packing data with production</h4><p>Track package count, weight, and lot information together with the related production record.</p><small><strong>Tracked data:</strong> Package count · Weight · Product lot</small></section>
+                        <section id="detail-dispatch" class="journey-detail" hidden><span>WHAT IT ENABLES</span><h4>Maintain traceability through dispatch</h4><p>Look back at which order and production lot each dispatched product belongs to.</p><small><strong>Tracked data:</strong> Order · Production lot · Dispatch record</small></section>
+                    </div>
+                    <p>Monitor and manage every production step through the same system.</p>
+                </article>
             </div>
 
-            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
+            <div class="journey-data-bridge"><span aria-hidden="true">↓</span><strong>Live data from the entire process</strong></div>
 
-            <div class="mb-5 platform-layer-main">
-                <div class="layer-label text-center text-emerald-400/80">Core operations</div>
-                <div class="flex flex-wrap justify-center items-center gap-2">
-                    <span class="plat-node-main">Raw materials</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Dosing</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main plat-node-focus">Production</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Press</span>
-                    <span class="flow-arrow">→</span>
-                    <span class="plat-node-main">Packing</span>
-                    <span class="flow-arrow text-slate-500">→</span>
-                    <span class="plat-node text-slate-400">Dispatch</span>
-                </div>
-            </div>
-
-            <div class="flex justify-center mb-4"><span class="flow-arrow text-xl">↓</span></div>
-
-            <div>
-                <div class="layer-label text-center">Data / management</div>
-                <div class="flex flex-wrap justify-center gap-2">
-                    <span class="chip-sm chip-sm-hi">Lot &amp; traceability</span>
-                    <span class="chip-sm">Reporting</span>
-                    <span class="chip-sm">KPI / performance</span>
-                    <span class="chip-sm chip-sm-warn">Flow and duration analysis</span>
-                </div>
-            </div>
+            <article class="journey-card journey-card-insight">
+                <div class="journey-heading"><span class="journey-number">03</span><div><span>MONITOR AND IMPROVE</span><h3>Turn production data into decision support</h3></div></div>
+                <div class="journey-insights"><span>Lot Traceability</span><span>Reporting</span><span>KPI / Performance</span><span>Cycle-Time and Production-Loss Analysis</span></div>
+                <p>Use data collected during production to evaluate quality, cycle times, and performance.</p>
+            </article>
         </div>
 
     </div>
@@ -293,10 +288,10 @@
 <section id="solutions" class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Live Operations</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Monitor and Manage <span class="gradient-text">Your Plant Live.</span></h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Monitor and Manage Your Plant <span class="gradient-text">in Real Time.</span></h2>
         <p class="text-slate-400 mb-10 max-w-3xl">Line and equipment status on a single screen — real-time production visibility.</p>
         <img src="Photos/Production_Page.webp" class="screenshot w-full glow mb-4" alt="Live production and equipment status SCADA screen" loading="lazy" decoding="async">
-        <p class="text-sm text-slate-500 text-center">Benefit: Operators see the line at a glance; management follows live status.</p>
+        <p class="text-sm text-slate-500 text-center">Benefit: Operators see the line at a glance while management tracks operations in real time.</p>
     </div>
 </section>
 <div class="page-break"></div>
@@ -325,7 +320,7 @@
             </div>
             <div class="glass-card rounded-xl p-4">
                 <div class="text-xs font-bold tracking-wider text-emerald-400 mb-2">ELECTRICAL</div>
-                <p class="text-slate-300 text-xs leading-relaxed">Electrical technical support</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Electrical engineering support</p>
             </div>
             <div class="glass-card rounded-xl p-4">
                 <div class="text-xs font-bold tracking-wider text-emerald-400 mb-2">SUPPLY</div>
@@ -337,66 +332,56 @@
 </section>
 <div class="page-break"></div>
 
-<!-- 06 HIZLI GELİŞTİRME -->
-<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+<!-- 06 SCALABLE INFRASTRUCTURE -->
+<section id="scalability" class="min-h-screen px-6 py-20 flex flex-col justify-center scalable-section">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Rapid Development</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">A New Need Does Not Have To Become <span class="gradient-text">A Brand-New Project.</span></h2>
-        <p class="text-slate-400 mb-10 max-w-3xl">Many new requirements can be added without turning into a long new project.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Scalable Infrastructure</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">New Equipment Shouldn’t Mean <span class="gradient-text">Building a New System.</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">When you add a new line, machine, or production step, the existing platform can be extended. The new setup can be incorporated into control, monitoring, and reporting workflows and managed through the same system.</p>
 
-        <div class="grid md:grid-cols-5 gap-3 mb-12 text-center text-sm">
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-flask text-emerald-400 mb-2"></i><div class="font-semibold text-white">New dosing unit</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-gears text-blue-400 mb-2"></i><div class="font-semibold text-white">New equipment</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-file-lines text-orange-400 mb-2"></i><div class="font-semibold text-white">New report</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-display text-purple-400 mb-2"></i><div class="font-semibold text-white">New tracking screen</div></div>
-            <div class="glass-card rounded-xl p-4"><i class="fa-solid fa-industry text-yellow-400 mb-2"></i><div class="font-semibold text-white">New production line</div></div>
+        <div class="scalable-panel glow">
+            <span class="scalable-example-label">EXAMPLE SCENARIO</span>
+            <h3>When a new dosing unit is added</h3>
+            <div class="scalable-flow" aria-label="Process for incorporating new equipment into the existing platform">
+                <span class="scalable-step">New equipment</span><i aria-hidden="true">→</i>
+                <span class="scalable-step">Integration with the existing platform</span><i aria-hidden="true">→</i>
+                <span class="scalable-step">Control and monitoring screens</span><i aria-hidden="true">→</i>
+                <span class="scalable-step scalable-step-result">Managed in one system</span>
+            </div>
+            <p class="scalable-result"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> As your plant grows, the platform adapts to your operational needs.</p>
         </div>
 
-        <div class="lot-premium rounded-2xl p-8 glow">
-            <div class="mb-2 text-xs font-bold tracking-wider text-orange-300">RESPONSE SPEED TO NEW NEEDS</div>
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Plant Changes Shouldn’t Wait On Your System.</h3>
-            <p class="text-slate-300 mb-3 max-w-3xl">This speed is not about screen-open milliseconds.</p>
-            <p class="text-slate-300 mb-8 max-w-3xl">Real speed is how quickly your system can change when your plant changes.</p>
-            <h4 class="text-lg font-bold text-white mb-4">Adding a new dosing unit?</h4>
-            <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-6">
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">New dosing unit</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">Equipment definition</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">SCADA</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-slate-800/80">Control</span>
-                <span class="flow-arrow">→</span>
-                <span class="px-3 py-2 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Reporting</span>
-            </div>
-            <p class="text-center text-emerald-300 font-medium">New need → rapid development → fast commissioning.</p>
+        <div class="scalable-benefits">
+            <article><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><div><h4>Preserve your existing foundation</h4><p>Add new requirements to the current structure without rebuilding the system from scratch.</p></div></article>
+            <article><i class="fa-solid fa-layer-group" aria-hidden="true"></i><div><h4>Stay on one platform</h4><p>Avoid disconnected software for every new piece of equipment.</p></div></article>
+            <article><i class="fa-solid fa-link" aria-hidden="true"></i><div><h4>Maintain data continuity</h4><p>Connect each new production step with existing lot, reporting, and performance records.</p></div></article>
+            <article><i class="fa-solid fa-arrow-up-right-dots" aria-hidden="true"></i><div><h4>Scale in stages</h4><p>Add new lines, screens, and reports as operational needs evolve.</p></div></article>
         </div>
     </div>
 </section>
 <div class="page-break"></div>
 
 <!-- 07 KULLANILABİLİRLİK -->
-<section class="min-h-screen px-6 py-20 flex flex-col justify-center">
+<section id="usability" class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
-        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Usability</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Operators Should Not Have To <span class="gradient-text">Memorize The System.</span></h2>
-        <p class="text-slate-400 mb-8 max-w-3xl">The right information, in the right place, at the right time.</p>
+        <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Ease of Use</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Give Operators the Information They Need <span class="gradient-text">at a Glance.</span></h2>
+        <p class="text-slate-400 mb-8 max-w-3xl">Production status, equipment information, and essential controls are presented clearly on the relevant screen.</p>
         <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div>
                 <img src="Photos/Dosing_Page.webp" class="screenshot w-full" alt="Operator dosing process and batch status screen" loading="lazy" decoding="async">
-                <p class="text-sm text-slate-500 mt-3">Benefit: Shorter learning time, fewer user errors.</p>
             </div>
             <div class="space-y-3 text-sm">
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Clear equipment status</strong><p class="text-slate-400 mt-1">Running / stopped / fault — at a glance.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Clear production status</strong><p class="text-slate-400 mt-1">Batch and dosing summary on screen.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Easy-to-reach information</strong><p class="text-slate-400 mt-1">The right information in the right place — without a maze of menus.</p></div>
-                <div class="glass-card rounded-xl p-4"><strong class="text-white">Clear actions</strong><p class="text-slate-400 mt-1">Start, pause, skip a line — clear actions.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">See equipment status clearly</strong><p class="text-slate-400 mt-1">Identify equipment that is running, idle, or in fault at a glance.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Monitor production in real time</strong><p class="text-slate-400 mt-1">View the active batch, dosing progress, and remaining process information together.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Reach essential information quickly</strong><p class="text-slate-400 mt-1">Access frequently used information without searching through complex menus.</p></div>
+                <div class="glass-card rounded-xl p-4"><strong class="text-white">Manage essential controls clearly</strong><p class="text-slate-400 mt-1">Distinguish controls for starting, pausing, and skipping a process step with ease.</p></div>
             </div>
         </div>
         <div class="grid md:grid-cols-3 gap-4 text-center text-sm">
             <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Shorter learning time</strong></div>
-            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Helps reduce user errors</strong></div>
-            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">More consistent operations</strong></div>
+            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">Helps lower the risk of user error</strong></div>
+            <div class="glass-card rounded-xl p-4"><strong class="text-emerald-300">More consistent work across operators</strong></div>
         </div>
     </div>
 </section>
@@ -414,9 +399,9 @@
                 <p class="text-xs text-slate-500 mt-2"><span class="tag mr-1">PRESS</span> Clear equipment status, understandable control</p>
             </div>
             <div class="grid gap-4">
-                <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">ACCESS</span><h3 class="font-bold text-white mb-1">Role-based authorization</h3><p class="text-sm text-slate-400">Not everyone can do every action — operator / automation / manager.</p></div>
+                <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">ACCESS</span><h3 class="font-bold text-white mb-1">Role-based authorization</h3><p class="text-sm text-slate-400">Role-based permissions ensure that each user can perform only authorized actions.</p></div>
                 <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">MODE</span><h3 class="font-bold text-white mb-1">Clear manual / automatic mode</h3><p class="text-sm text-slate-400">M/A status is visible on equipment, reducing confusion.</p></div>
-                <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">ALARM</span><h3 class="font-bold text-white mb-1">Clear alarm messages</h3><p class="text-sm text-slate-400">Active alarms stay visible; they do not disappear quietly.</p></div>
+                <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">ALARM</span><h3 class="font-bold text-white mb-1">Clear alarm messages</h3><p class="text-sm text-slate-400">Active alarms remain visible until they are acknowledged.</p></div>
                 <div class="glass-card rounded-xl p-5"><span class="tag mb-2 inline-block">AUDIT</span><h3 class="font-bold text-white mb-1">Action logs</h3><p class="text-sm text-slate-400">Critical interventions are logged with the user — “who did what?”</p></div>
             </div>
         </div>
@@ -429,7 +414,7 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Production</div>
         <h2 class="text-4xl md:text-5xl font-bold mb-4">Plan → Produce → <span class="gradient-text">Measure.</span></h2>
-        <p class="text-slate-400 mb-8 max-w-3xl">Do not guess what happened in production later. Analysis is the next step.</p>
+        <p class="text-slate-400 mb-8 max-w-3xl">Replace hindsight and guesswork with production data you can analyze.</p>
         <div class="flex flex-wrap gap-2 mb-10 text-sm font-semibold">
             <span class="px-3 py-1 rounded-lg glass-card text-emerald-300">Plan</span>
             <span class="flow-arrow">→</span>
@@ -451,7 +436,7 @@
                 <img src="Photos/production_report.webp" class="screenshot w-full" alt="Planned versus actual production comparison report" loading="lazy" decoding="async">
                 <div class="shot-caption">
                     <div class="flex items-center gap-2 mb-2"><span class="tag">MEASURE</span><h3 class="text-lg font-bold">Compare Planned vs Actual Production</h3></div>
-                    <p class="text-sm text-slate-400">Benefit: Target vs actual, duration, user; Excel / PDF.</p>
+                    <p class="text-sm text-slate-400">Benefit: Compare targets with actual output by cycle time and operator, then export to Excel or PDF.</p>
                 </div>
             </div>
         </div>
@@ -495,7 +480,7 @@
                 <div class="kpi-chip"><div class="lbl">Average</div><div class="val">~7 min</div></div>
                 <div class="kpi-chip"><div class="lbl">Signal</div><div class="val text-sm text-orange-300 mt-1">Step to investigate</div></div>
             </div>
-            <p class="text-center text-emerald-300 font-medium">An unusually long transition can show where production is slowing down.</p>
+            <p class="text-center text-emerald-300 font-medium">An unusually long changeover can show where production is slowing down.</p>
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -512,8 +497,8 @@
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Lot &amp; Traceability</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Know Not Only The Product History, <span class="gradient-text">But How It Was Produced.</span></h2>
-        <p class="text-slate-400 mb-8 max-w-3xl">Use production data to review product history from raw materials to packing.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Trace Not Only a Product’s History, <span class="gradient-text">but How It Was Made.</span></h2>
+        <p class="text-slate-400 mb-8 max-w-3xl">Use production data to trace each product from raw materials through packing.</p>
 
         <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-slate-300 mb-10">
             <span class="px-3 py-1 rounded-lg bg-slate-800/80">Recipe</span>
@@ -557,10 +542,10 @@
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Management</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">See Plant Performance <span class="gradient-text">On One Screen.</span></h2>
-        <p class="text-slate-400 mb-10 max-w-3xl">Daily tonnage, batches, target achievement — management summary.</p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">See Plant Performance <span class="gradient-text">on One Screen.</span></h2>
+        <p class="text-slate-400 mb-10 max-w-3xl">Review daily tonnage, batch counts, and target achievement in one management summary.</p>
         <img src="Photos/dashboard1.webp" class="screenshot w-full max-w-5xl mx-auto glow" alt="Management dashboard with daily tonnage, batches, and targets" loading="lazy" decoding="async">
-        <p class="text-sm text-slate-500 text-center mt-4">Benefit: Read the plant day at a glance from the office.</p>
+        <p class="text-sm text-slate-500 text-center mt-4">Benefit: See how the plant performed that day at a glance.</p>
     </div>
 </section>
 <div class="page-break"></div>
@@ -569,7 +554,7 @@
 <section class="min-h-screen px-6 py-20 flex flex-col justify-center">
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Future-Ready</div>
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">As Your Plant Grows, <span class="gradient-text">Your System Grows With It.</span></h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">As Your Plant Grows, <span class="gradient-text">Your System Grows with It.</span></h2>
         <p class="text-slate-400 mb-12 max-w-3xl">New line, new equipment, new report — the system can expand with your plant.</p>
         <div class="grid md:grid-cols-2 gap-8">
             <div class="glass-card rounded-2xl p-8">
@@ -599,7 +584,7 @@
     <div class="max-w-6xl mx-auto w-full">
         <div class="mb-4 text-emerald-400 font-semibold tracking-wider uppercase text-sm">Operational Impact</div>
         <h2 class="text-4xl md:text-5xl font-bold mb-4">What Changes <span class="gradient-text">After Go-Live?</span></h2>
-        <p class="text-slate-400 mb-10 max-w-3xl">These benefits can be tracked through the production, waiting time, alarm, planning, and lot data recorded by the system.</p>
+        <p class="text-slate-400 mb-10 max-w-3xl">Track these benefits using recorded production, wait-time, alarm, planning, and lot data.</p>
 
         <div class="benefits-grid">
             <article class="benefit-card">
@@ -609,7 +594,7 @@
             </article>
             <article class="benefit-card">
                 <span class="benefit-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></span>
-                <h3>Standardize operator decisions</h3>
+                <h3>Standardize operator workflows</h3>
                 <p>Reduce manual tracking by presenting recipe, batch, and equipment status in one workflow.</p>
             </article>
             <article class="benefit-card">
@@ -629,7 +614,7 @@
             </article>
             <article class="benefit-card">
                 <span class="benefit-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
-                <h3>Keep your investment extensible</h3>
+                <h3>Build on your investment over time</h3>
                 <p>Add new lines, equipment, reports, and tracking screens to the existing platform.</p>
             </article>
         </div>
@@ -637,10 +622,10 @@
         <div class="benefit-audiences">
             <div><strong>Operator</strong><span>Clearer workflows and less manual tracking</span></div>
             <div><strong>Production management</strong><span>Live status, planning, and production flow visibility</span></div>
-            <div><strong>Plant management</strong><span>Measurable performance and traceable decisions</span></div>
+            <div><strong>Plant management</strong><span>Measurable performance and data-backed decisions</span></div>
         </div>
         <div class="benefit-cta">
-            <p>Let's evaluate these benefits against your plant's real production flow.</p>
+            <p>Let’s evaluate these benefits in the context of your plant’s actual production workflow.</p>
             <a class="hero-primary" href="#contact"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Request a 30-Minute Demo</a>
         </div>
     </div>
@@ -654,14 +639,14 @@
         <div class="about-grid">
             <div class="about-panel">
                 <span class="tag mb-4 inline-block">PUNT AUTOMATION</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-5">We Don't Separate Software <span class="gradient-text">From The Shop Floor.</span></h2>
-                <p class="text-lg text-slate-300 leading-relaxed mb-5">We are an automation team that approaches feed mill production needs as one system — from SCADA and production software to PLC, HMI, electrical, and field support.</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-5">We Don't Separate Software <span class="gradient-text">from the Shop Floor.</span></h2>
+                <p class="text-lg text-slate-300 leading-relaxed mb-5">We are an automation team that treats feed mill production as an integrated whole — from SCADA and production software to PLC, HMI, electrical engineering, and field support.</p>
                 <p class="text-slate-400 leading-relaxed">Our goal is not simply to deliver working screens. We build systems that evolve with your plant, make operators' work easier, and give management measurable visibility.</p>
             </div>
             <div class="about-points">
-                <div class="about-point"><strong>End-to-end approach</strong><span>We evaluate software, automation, electrical, and field requirements through one technical perspective.</span></div>
+                <div class="about-point"><strong>End-to-end approach</strong><span>We evaluate software, automation, electrical, and field requirements through one integrated technical approach.</span></div>
                 <div class="about-point"><strong>Production-focused design</strong><span>Every screen is shaped around real operator workflows, production data, and decision needs.</span></div>
-                <div class="about-point"><strong>Continuity after go-live</strong><span>When a new line, machine, or report is needed, we continue evolving the system with your plant.</span></div>
+                <div class="about-point"><strong>Ongoing support after go-live</strong><span>When a new line, machine, or report is needed, we continue evolving the system with your plant.</span></div>
             </div>
         </div>
     </div>
@@ -707,7 +692,7 @@
             Let’s review your current automation and identify where we can improve visibility and control.
         </p>
         <div class="text-left max-w-4xl mx-auto mb-10">
-            <h3 class="text-xl font-bold text-white mb-2 text-center">For Us, SCADA Is More Than A Screen.</h3>
+            <h3 class="text-xl font-bold text-white mb-2 text-center">To Us, SCADA Is More Than a Screen.</h3>
             <p class="text-sm text-slate-500 mb-4 text-center">Many companies can build SCADA screens. The real difference is how quickly the system adapts when your plant changes.</p>
             <p class="text-base text-emerald-300 font-semibold mb-6 text-center">From software to the shop floor — we’re with you when you need us.</p>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
@@ -1192,5 +1177,6 @@
   });
 })();
 </script>
-<script src="site-shell.js"></script>
+<script src="site-shell.js?v=20260818-2"></script>
+<script src="journey-explorer.js?v=20260818-1"></script>
 </body></html>
