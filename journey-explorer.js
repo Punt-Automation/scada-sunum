@@ -36,4 +36,17 @@
     closeDetails();
     if (activeTrigger) activeTrigger.focus();
   });
+  var productTriggers = Array.prototype.slice.call(document.querySelectorAll('.product-hotspot'));
+  var productTitle = document.getElementById('product-detail-title');
+  var productCopy = document.getElementById('product-detail-copy');
+  var productData = document.getElementById('product-detail-data');
+  productTriggers.forEach(function (trigger) {
+    trigger.setAttribute('aria-pressed', String(trigger.classList.contains('is-active')));
+    trigger.addEventListener('click', function () {
+      productTriggers.forEach(function (item) { var active=item===trigger; item.classList.toggle('is-active',active); item.setAttribute('aria-pressed',String(active)); });
+      if(productTitle) productTitle.textContent=trigger.getAttribute('data-title')||'';
+      if(productCopy) productCopy.textContent=trigger.getAttribute('data-copy')||'';
+      if(productData) productData.textContent=trigger.getAttribute('data-data')||'';
+    });
+  });
 })();
