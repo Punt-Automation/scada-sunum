@@ -1,7 +1,7 @@
 // Punt Automation — lead kaynağı yakalama (utm/gclid/fbclid → Cloudflare Worker → BigQuery).
 // Formun FormSubmit'e gönderimini değiştirmez; yalnızca bir kopyasını Worker'a yollar.
 (function () {
-  var WORKER_URL = "https://punt-data-pipeline.kalip-cloud.workers.dev/lead";
+  var WORKER_URL = "https://data.puntautomationtech.com/lead";
   var FORM_SELECTOR = 'form[action*="formsubmit.co"]';
   // Worker alan adı : sitedeki formun input name'i (puntautomationtech.com, Ekim 2026)
   var FIELD_MAP = {
