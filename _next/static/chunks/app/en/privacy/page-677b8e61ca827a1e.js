@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[223],{4310:(e,n,t)=>{Promise.resolve().then(t.bind(t,9848))},9848:(e,n,t)=>{"use strict";t.d(n,{LangSync:()=>c});var u=t(7613);function c({lang:e}){return(0,u.useEffect)(()=>(document.documentElement.lang=e,()=>{document.documentElement.lang="tr"}),[e]),null}}},e=>{e.O(0,[464,34,358],()=>e(e.s=4310)),_N_E=e.O()}]);
